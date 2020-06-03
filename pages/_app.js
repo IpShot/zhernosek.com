@@ -15,6 +15,11 @@ export default function App({ Component, pageProps }) {
 
   return (
     <React.Fragment>
+    <Head>
+      <title>Roman Zhernosek - Full stack web developer</title>
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+    </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
