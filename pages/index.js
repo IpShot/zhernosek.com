@@ -1,4 +1,13 @@
-import { Grid, Avatar, Typography } from '@material-ui/core';
+import {
+  Grid,
+  Avatar,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+} from '@material-ui/core';
+import { Rating } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
 import Layout from '../components/Layout';
 
@@ -23,6 +32,15 @@ const useStyles = makeStyles((theme) => ({
       height: 120,
       width: 120,
     },
+  },
+  skillsList: {
+
+  },
+  skillItem: {
+    padding: '8px 0',
+  },
+  skillItemText: {
+    fontSize: 20,
   },
 }));
 
@@ -53,19 +71,29 @@ function Profile() {
   );
 }
 
-function Skills() {
+function Skill({ name, level }) {
+  const classes = useStyles();
   return (
-    <Typography component="h2" gutterBottom>
-      Skills
-    </Typography>
+    <ListItem alignItems="space-between" className={classes.skillItem}>
+        <ListItemText primary={name} primaryTypographyProps={{ className: classes.skillItemText }}/>
+        <ListItemIcon>
+          <Rating value={level} readOnly />
+        </ListItemIcon>
+    </ListItem>
   );
 }
 
-function Portfolio() {
+function Skills() {
+  const classes = useStyles();
   return (
-    <Typography component="h2" gutterBottom>
-      Portfolio
-    </Typography>
+    <div>
+      <Typography variant="h2" gutterBottom>
+        Skills
+      </Typography>
+      <List className={classes.skillsList}>
+        <Skill name="React" level={5} />
+      </List>
+    </div>
   );
 }
 
@@ -74,7 +102,6 @@ export default function HomePage() {
     <Layout>
       <Profile />
       <Skills />
-      <Portfolio />
     </Layout>
   );
 }
