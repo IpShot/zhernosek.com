@@ -4,6 +4,7 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 const theme = responsiveFontSizes(createMuiTheme({
   palette: {
     type: 'dark',
+    divider: 'rgba(255, 255, 255, 0.25)',
   },
   typography: {
     h1: {
@@ -15,7 +16,11 @@ const theme = responsiveFontSizes(createMuiTheme({
       fontWeight: 400,
     },
     h3: {
-      fontSize: 22,
+      fontSize: 18,
+      fontWeight: 400,
+    },
+    h4: {
+      fontSize: 18,
       fontWeight: 400,
     },
     fontSize: 14,
