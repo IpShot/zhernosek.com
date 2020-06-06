@@ -1,4 +1,5 @@
 import {
+  Box,
   Grid,
   Avatar,
   Typography,
@@ -6,9 +7,13 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  Collapse,
+  Divider,
 } from '@material-ui/core';
+import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Rating } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
+import { SKILLS } from '../constants';
 import Layout from '../components/Layout';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,13 +39,14 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   skillsList: {
-
+    paddingTop: 8,
+    paddingBottom: 0,
   },
-  skillItem: {
+  skillsSectionName: {
     padding: '8px 0',
   },
-  skillItemText: {
-    fontSize: 20,
+  skillItem: {
+    padding: '5px 0 5px 16px',
   },
 }));
 
@@ -55,12 +61,12 @@ function About() {
 function Profile() {
   const classes = useStyles();
   return (
-    <Grid container spacing={2} className={classes.gridContainer}>
+    <Grid container className={classes.gridContainer}>
       <Grid item xs={6} className={classes.gridItem}>
         <Avatar
           alt="Roman Zhernosek"
           src="/avatar.jpeg"
-          variant="square"
+          variant="rounded"
           className={classes.avatar}
         />
       </Grid>
@@ -71,29 +77,97 @@ function Profile() {
   );
 }
 
-function Skill({ name, level }) {
+function Skill({ name, level }, idx) {
   const classes = useStyles();
   return (
-    <ListItem alignItems="space-between" className={classes.skillItem}>
-        <ListItemText primary={name} primaryTypographyProps={{ className: classes.skillItemText }}/>
-        <ListItemIcon>
-          <Rating value={level} readOnly />
-        </ListItemIcon>
+    <ListItem key={idx} alignItems="center" className={classes.skillItem}>
+      <ListItemText disableTypography>
+        <Typography variant="h4">
+          {name}
+        </Typography>
+      </ListItemText>
+      <ListItemIcon>
+        <Rating value={level} precision={0.5} readOnly />
+      </ListItemIcon>
     </ListItem>
+  );
+}
+
+function SkillsSection([ section, skills ], idx) {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  }
+
+  return (
+    <List key={idx} disablePadding>
+      <ListItem
+        button
+        onClick={handleClick}
+        className={classes.skillsSectionName}>
+        <ListItemText disableTypography>
+          <Typography variant="h3">
+            {section}
+          </Typography>
+        </ListItemText>
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List>
+          {skills.map(Skill)}
+        </List>
+      </Collapse>
+    </List>
   );
 }
 
 function Skills() {
   const classes = useStyles();
   return (
-    <div>
+    <Box pt={8}>
       <Typography variant="h2" gutterBottom>
         Skills
       </Typography>
+      <Divider />
       <List className={classes.skillsList}>
-        <Skill name="React" level={5} />
+        {Object.entries(SKILLS).map(SkillsSection)}
       </List>
-    </div>
+    </Box>
+  );
+}
+
+function Portfolio() {
+  return (
+    <Box pt={6}>
+      <Typography variant="h2" gutterBottom>
+        Portfolio
+      </Typography>
+      <Divider />
+    </Box>
+  );
+}
+
+function Feedback() {
+  return (
+    <Box pt={6}>
+      <Typography variant="h2" gutterBottom>
+        Feedback
+      </Typography>
+      <Divider />
+    </Box>
+  );
+}
+
+function OwnProjects() {
+  return (
+    <Box pt={6}>
+      <Typography variant="h2" gutterBottom>
+        Own Projects
+      </Typography>
+      <Divider />
+    </Box>
   );
 }
 
@@ -102,6 +176,9 @@ export default function HomePage() {
     <Layout>
       <Profile />
       <Skills />
+      <Portfolio />
+      <Feedback />
+      <OwnProjects />
     </Layout>
   );
 }
