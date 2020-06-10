@@ -19,11 +19,6 @@ const theme = responsiveFontSizes(createMuiTheme({
       fontSize: 18,
       fontWeight: 400,
     },
-    h4: {
-      fontSize: 18,
-      fontWeight: 400,
-    },
-    fontSize: 14,
   },
 }));
 

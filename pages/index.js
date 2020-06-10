@@ -44,7 +44,10 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
   },
   skillsSectionName: {
-    padding: '8px 0',
+    padding: `${theme.spacing(1)}px 0`,
+  },
+  skillsSectionText: {
+    margin: 0,
   },
   skillItem: {
     padding: '5px 0 5px 16px',
@@ -86,7 +89,7 @@ function Skill({ name, level }, idx) {
   return (
     <ListItem key={idx} alignItems="center" className={classes.skillItem}>
       <ListItemText disableTypography>
-        <Typography variant="h4">
+        <Typography variant="h3">
           {name}
         </Typography>
       </ListItemText>
@@ -111,8 +114,8 @@ function SkillsSection([ section, skills ], idx) {
         button
         onClick={handleClick}
         className={classes.skillsSectionName}>
-        <ListItemText disableTypography>
-          <Typography variant="h3">
+        <ListItemText disableTypography className={classes.skillsSectionText}>
+          <Typography component="span" variant="h3">
             {section}
           </Typography>
         </ListItemText>
