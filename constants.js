@@ -25,6 +25,7 @@ export const SKILLS = {
   CLOUD: [
     { name: 'Heroku', level: 5 },
     { name: 'Amazon S3', level: 5 },
+    { name: 'Cloudflare', level: 4 },
     { name: 'Google Cloud Platform', level: 3 },
     { name: 'DigitalOcean', level: 2 },
     { name: 'Azure', level: 1 },
