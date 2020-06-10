@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Head from 'next/head';
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,7 +8,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Layout({ children, title = 'Roman Zhernosek - Full stack web developer' }) {
+export default function Layout({
+  children,
+  title = 'Roman Zhernosek - Full stack web developer'
+}) {
   const classes = useStyles();
   return (
     <div>
