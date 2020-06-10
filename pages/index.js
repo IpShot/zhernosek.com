@@ -13,8 +13,9 @@ import {
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Rating } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
-import { SKILLS } from '../constants';
+import { SKILLS, PORTFOLIO } from '../constants';
 import Layout from '../components/Layout';
+import ProjectCard from '../components/ProjectCard';
 
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   skillsList: {
-    paddingTop: 8,
+    paddingTop: theme.spacing(2),
     paddingBottom: 0,
   },
   skillsSectionName: {
@@ -47,6 +48,9 @@ const useStyles = makeStyles((theme) => ({
   },
   skillItem: {
     padding: '5px 0 5px 16px',
+  },
+  projectsList: {
+    paddingTop: theme.spacing(2),
   },
 }));
 
@@ -126,7 +130,7 @@ function SkillsSection([ section, skills ], idx) {
 function Skills() {
   const classes = useStyles();
   return (
-    <Box pt={8}>
+    <Box pt={6}>
       <Typography variant="h2" gutterBottom>
         Skills
       </Typography>
@@ -139,12 +143,16 @@ function Skills() {
 }
 
 function Portfolio() {
+  const classes = useStyles();
   return (
-    <Box pt={6}>
+    <Box pt={4}>
       <Typography variant="h2" gutterBottom>
         Portfolio
       </Typography>
       <Divider />
+      <Grid container spacing={2} className={classes.projectsList}>
+        {PORTFOLIO.map(ProjectCard)}
+      </Grid>
     </Box>
   );
 }
