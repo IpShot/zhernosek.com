@@ -51,3 +51,22 @@ export const SKILLS = {
   //   { name: 'Android SDK', level: 3 },
   // ]
 }
+
+export const PORTFOLIO = [{
+  name: 'MiID',
+  desc: 'Bla bla bla',
+}, {
+  name: 'Teem',
+  desc: 'Bla bla bla',
+}, {
+  name: 'JobNinja',
+  desc: 'Bla bla bla',
+  url: 'https://jobninja.com',
+}, {
+  name: 'Briefly',
+  desc: 'Bla bla bla',
+}, {
+  name: 'LightYear',
+  desc: 'Bla bla bla',
+  url: 'https://lightyear.co',
+}]
