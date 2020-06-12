@@ -15,10 +15,10 @@ export const SKILLS = {
     { name: 'Express', level: 4 },
     { name: 'Mocha', level: 4 },
     { name: 'Jest', level: 4 },
+    { name: 'React Native', level: 3 },
     { name: 'Bootstrap', level: 3 },
-    { name: 'React Native', level: 2 },
     { name: 'Eve', level: 2 },
-    { name: 'Angular', level: 1 },
+    { name: 'Angular', level: 2 },
   ],
   DATABASE: [
     { name: 'MongoDB', level: 5 },
@@ -29,14 +29,14 @@ export const SKILLS = {
     { name: 'Amazon S3', level: 5 },
     { name: 'Cloudflare', level: 4 },
     { name: 'Google Cloud Platform', level: 3 },
-    { name: 'DigitalOcean', level: 2 },
-    { name: 'Azure', level: 1 },
+    { name: 'DigitalOcean', level: 3 },
+    { name: 'Azure', level: 2 },
   ],
   TOOLS: [
     { name: 'Docker', level: 5 },
     { name: 'Webpack', level: 5 },
-    { name: 'Cordova', level: 3 },
-    { name: 'Electron', level: 2 },
+    { name: 'Cordova', level: 4 },
+    { name: 'Electron', level: 3 },
   ],
   INTEGRATIONS: [
     { name: 'Mailchimp', level: 5 },
@@ -61,6 +61,12 @@ export const PORTFOLIO = [{
   search jobs by criterias and apply to them. Service was developed for Germany.',
   url: 'https://jobninja.com',
 },{
+  name: 'LightYear',
+  desc: 'Courses and leadership trainings',
+  details: '',
+  url: 'https://lightyear.co',
+  img: 'logo.svg',
+},{
   name: 'MiID',
   desc: 'Custom products marketplace',
   details: 'Client wanted to develop a web app that allows users \
@@ -69,13 +75,6 @@ export const PORTFOLIO = [{
   like products, following another users. I built a front-end part in React \
   with flux architecture to get data from API. \
   For building front-end project I had used Webpack.',
-},{
-  name: 'Briefly',
-  desc: 'Connect brands and photographers',
-  details: 'Client wanted to create a platform for connect brands and photographs. \
-  Brand should be able to post info about required photos content, select creator, \
-  discuss project with creator, review photos, complete project and pay. \
-  Creator should be able to view project info, submit proposal, discuss project with brand, upload photos.',
 },{
   name: 'Teem',
   desc: 'The US schools platform',
@@ -86,10 +85,12 @@ export const PORTFOLIO = [{
   I built almost all in the app using Meteor + React. \
   Also I used Meteor\'s Cordova integration to wrap an app for mobile iOS and Android.'
 },{
-  name: 'LightYear',
-  desc: 'Courses and leadership trainings',
-  details: '',
-  url: 'https://lightyear.co',
+  name: 'Briefly',
+  desc: 'Connect brands and photographers',
+  details: 'Client wanted to create a platform for connect brands and photographs. \
+  Brand should be able to post info about required photos content, select creator, \
+  discuss project with creator, review photos, complete project and pay. \
+  Creator should be able to view project info, submit proposal, discuss project with brand, upload photos.',
 }]
 
 export const FEEDBACKS = [{
