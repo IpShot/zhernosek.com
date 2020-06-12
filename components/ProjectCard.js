@@ -13,18 +13,20 @@ import { makeStyles } from '@material-ui/core/styles';
 import ProjectDialog from './ProjectDialog';
 
 const useStyles = makeStyles(() => ({
-  media: {
+  media: ({ name }) => ({
     height: 140,
-  },
+    backgroundSize: name === 'MiID' ? 'auto' : 'contain',
+    backgroundColor: 'white',
+  }),
 }));
 
-function getImageUrl(name = 'default') {
-  return `/${name.toLowerCase()}.png`;
+function getLogoUrl(project = 'default', img = 'logo.png') {
+  return `/${project.toLowerCase()}/${img}`;
 }
 
 export default function ProjectCard(project, idx) {
   const { name, desc, img, url } = project;
-  const classes = useStyles();
+  const classes = useStyles({ name });
   const [isDialogOpen, setDialogVisibility] = React.useState(false);
 
   function handleClickCard() {
@@ -41,7 +43,7 @@ export default function ProjectCard(project, idx) {
         <CardActionArea onClick={handleClickCard}>
           <CardMedia
             className={classes.media}
-            image={getImageUrl(name)}
+            image={getLogoUrl(name, img)}
             title={`${name} logo`}
           />
           <CardContent>
