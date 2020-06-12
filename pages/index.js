@@ -13,7 +13,7 @@ import {
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Rating } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
-import { SKILLS, PORTFOLIO } from '../constants';
+import { SKILLS, PORTFOLIO } from '../data';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
 
@@ -113,7 +113,8 @@ function SkillsSection([ section, skills ], idx) {
       <ListItem
         button
         onClick={handleClick}
-        className={classes.skillsSectionName}>
+        className={classes.skillsSectionName}
+      >
         <ListItemText disableTypography className={classes.skillsSectionText}>
           <Typography component="span" variant="h3">
             {section}
@@ -160,11 +161,11 @@ function Portfolio() {
   );
 }
 
-function Feedback() {
+function Feedbacks() {
   return (
     <Box pt={6}>
       <Typography variant="h2" gutterBottom>
-        Feedback
+        Feedbacks
       </Typography>
       <Divider />
     </Box>
@@ -188,7 +189,7 @@ export default function HomePage() {
       <Profile />
       <Skills />
       <Portfolio />
-      <Feedback />
+      <Feedbacks />
       <OwnProjects />
     </Layout>
   );
