@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Grid,
   Card,
@@ -9,11 +10,9 @@ import {
   Typography,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ProjectDialog from './ProjectDialog';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-
-  },
+const useStyles = makeStyles(() => ({
   media: {
     height: 140,
   },
@@ -23,12 +22,23 @@ function getImageUrl(name = 'default') {
   return `/${name.toLowerCase()}.png`;
 }
 
-export default function ProjectCard({ name, desc, img, url }, idx) {
+export default function ProjectCard(project, idx) {
+  const { name, desc, img, url } = project;
   const classes = useStyles();
+  const [isDialogOpen, setDialogVisibility] = React.useState(false);
+
+  function handleClickCard() {
+    setDialogVisibility(true);
+  }
+
+  function handleCloseDialog() {
+    setDialogVisibility(false);
+  }
+
   return (
     <Grid item key={idx} sm={6} xs={12}>
-      <Card className={classes.root}>
-        <CardActionArea>
+      <Card>
+        <CardActionArea onClick={handleClickCard}>
           <CardMedia
             className={classes.media}
             image={getImageUrl(name)}
@@ -43,12 +53,12 @@ export default function ProjectCard({ name, desc, img, url }, idx) {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Button size="small" color="primary">
-            Read More
-          </Button>
-        </CardActions>
       </Card>
+      {isDialogOpen && (
+        <ProjectDialog
+          project={project}
+          open={isDialogOpen}
+          onClose={handleCloseDialog} />)}
     </Grid>
   );
 }
