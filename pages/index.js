@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
   },
   skillsSectionName: {
-    padding: `${theme.spacing(1)}px 0`,
+    padding: theme.spacing(1, 0),
   },
   skillsSectionText: {
     margin: 0,
   },
   skillItem: {
-    padding: `${theme.spacing(0.5)}px 0`,
+    padding: theme.spacing(0.5, 0),
     paddingLeft: theme.spacing(2),
   },
   portfolioList: {
