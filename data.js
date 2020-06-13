@@ -60,12 +60,13 @@ export const PORTFOLIO = [{
   details: 'Client wanted to develop web desktop client and mobile apps for \
   search jobs by criterias and apply to them. Service was developed for Germany.',
   url: 'https://jobninja.com',
+  images: ['landing', 'job search', 'job page', 'profile'],
 },{
   name: 'LightYear',
   desc: 'Courses and leadership trainings',
   details: '',
   url: 'https://lightyear.co',
-  img: 'logo.svg',
+  logo: 'logo.svg',
 },{
   name: 'MiID',
   desc: 'Custom products marketplace',
@@ -75,6 +76,10 @@ export const PORTFOLIO = [{
   like products, following another users. I built a front-end part in React \
   with flux architecture to get data from API. \
   For building front-end project I had used Webpack.',
+  images: [
+    'landing', 'brand page', 'customization', 'cart', 'order info',
+    'shopping history', 'account', 'public profile'
+  ],
 },{
   name: 'Teem',
   desc: 'The US schools platform',
@@ -83,7 +88,11 @@ export const PORTFOLIO = [{
   which help them at work. Also it should has an admin side for managing schools \
   and districts (group of schools in America). The managing includes managing users (staffs) and topics.\
   I built almost all in the app using Meteor + React. \
-  Also I used Meteor\'s Cordova integration to wrap an app for mobile iOS and Android.'
+  Also I used Meteor\'s Cordova integration to wrap an app for mobile iOS and Android.',
+  images: [
+    'landing', 'sign in', 'school staffs list', 'create new topic', 'topic channel',
+    'notifications', 'global search', 'schools list (admin)', 'school topics (admin)'
+  ],
 },{
   name: 'Briefly',
   desc: 'Connect brands and photographers',
@@ -91,6 +100,13 @@ export const PORTFOLIO = [{
   Brand should be able to post info about required photos content, select creator, \
   discuss project with creator, review photos, complete project and pay. \
   Creator should be able to view project info, submit proposal, discuss project with brand, upload photos.',
+  images: [
+    'landing', 'login', 'new project modal', 'brand start create project',
+    'creator briefs', 'creator submit proposal', 'brand select proposal',
+    'chat', 'image comments', 'brand assets', 'creator assets', 'payments',
+    'receipt', 'admin brands list', 'admin brand info', 'admin creators list',
+    'admin creator reviews', 'admin projects list', 'admin project financials'
+  ],
 }]
 
 export const FEEDBACKS = [{
