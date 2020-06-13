@@ -29,13 +29,13 @@ export default function ProjectCard(project, idx) {
   const classes = useStyles({ name });
   const [isDialogOpen, setDialogVisibility] = React.useState(false);
 
-  function handleClickCard() {
+  const handleClickCard = React.useCallback(() => {
     setDialogVisibility(true);
-  }
+  }, []);
 
-  function handleCloseDialog() {
+  const handleCloseDialog = React.useCallback(() => {
     setDialogVisibility(false);
-  }
+  }, []);
 
   return (
     <Grid item key={idx} sm={6} xs={12}>
