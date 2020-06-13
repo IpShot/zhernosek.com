@@ -69,7 +69,7 @@ export const PORTFOLIO = [{
   logo: 'logo.svg',
 },{
   name: 'MiID',
-  desc: 'Custom products marketplace',
+  desc: 'Customizable products marketplace',
   details: 'Client wanted to develop a web app that allows users \
   to customize products from different brands (and see 3D model at real time), \
   buy them or products customized by another users, add products to favorites, \
