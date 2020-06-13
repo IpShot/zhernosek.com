@@ -1,4 +1,3 @@
-import { makeStyles } from '@material-ui/core/styles';
 import {
   Grid,
   Dialog,
@@ -7,6 +6,8 @@ import {
   DialogContentText,
 } from '@material-ui/core';
 import Zoom from 'react-medium-image-zoom';
+import { makeStyles } from '@material-ui/core/styles';
+import { useImage } from 'react-image';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -33,15 +34,20 @@ function getScreenshotUrl(project, image) {
 }
 
 function Screenshot({ project, image }) {
+  const { src, isLoading } = useImage({
+    srcList: getScreenshotUrl(project, image),
+    useSuspense: false,
+  });
   const classes = useStyles();
   return (
     <Grid item sm={6} xs={12} className={classes.screenshotContainer}>
-      <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
+      {!isLoading && <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
         <img
-          src={getScreenshotUrl(project, image)}
+          src={src}
           className={classes.screenshot}
+          alt={image}
         />
-      </Zoom>
+      </Zoom>}
     </Grid>
   );
 }

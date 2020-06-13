@@ -13,6 +13,7 @@
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-image": "^4.0.1",
     "react-medium-image-zoom": "^4.3.1"
   }
 }
