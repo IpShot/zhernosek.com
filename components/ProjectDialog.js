@@ -6,6 +6,7 @@ import {
   DialogContentText,
 } from '@material-ui/core';
 import Zoom from 'react-medium-image-zoom';
+import { Skeleton } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
 import { useImage } from 'react-image';
 
@@ -41,13 +42,20 @@ function Screenshot({ project, image }) {
   const classes = useStyles();
   return (
     <Grid item sm={6} xs={12} className={classes.screenshotContainer}>
-      {!isLoading && <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
-        <img
-          src={src}
-          className={classes.screenshot}
-          alt={image}
-        />
-      </Zoom>}
+      {isLoading &&
+        <Skeleton
+          variant="rect"
+          animation="wave"
+          width="100%"
+          height="195px" />}
+      {!isLoading &&
+        <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
+          <img
+            src={src}
+            className={classes.screenshot}
+            alt={image}
+          />
+        </Zoom>}
     </Grid>
   );
 }
