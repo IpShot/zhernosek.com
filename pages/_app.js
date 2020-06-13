@@ -3,6 +3,7 @@ import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export default function App({ Component, pageProps }) {
   React.useEffect(() => {
