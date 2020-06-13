@@ -50,9 +50,10 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
   },
   skillItem: {
-    padding: '5px 0 5px 16px',
+    padding: `${theme.spacing(0.5)}px 0`,
+    paddingLeft: theme.spacing(2),
   },
-  projectsList: {
+  portfolioList: {
     paddingTop: theme.spacing(2),
   },
 }));
@@ -154,7 +155,7 @@ function Portfolio() {
         Portfolio
       </Typography>
       <Divider />
-      <Grid container spacing={2} className={classes.projectsList}>
+      <Grid container spacing={2} className={classes.portfolioList}>
         {PORTFOLIO.map(ProjectCard)}
       </Grid>
     </Box>
