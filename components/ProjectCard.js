@@ -20,12 +20,12 @@ const useStyles = makeStyles(() => ({
   }),
 }));
 
-function getLogoUrl(project = 'default', img = 'logo.png') {
-  return `/${project.toLowerCase()}/${img}`;
+function getLogoUrl(project = 'default', logo = 'logo.png') {
+  return `/${project.toLowerCase()}/${logo}`;
 }
 
 export default function ProjectCard(project, idx) {
-  const { name, desc, img, url } = project;
+  const { name, desc, logo, url } = project;
   const classes = useStyles({ name });
   const [isDialogOpen, setDialogVisibility] = React.useState(false);
 
@@ -43,7 +43,7 @@ export default function ProjectCard(project, idx) {
         <CardActionArea onClick={handleClickCard}>
           <CardMedia
             className={classes.media}
-            image={getLogoUrl(name, img)}
+            image={getLogoUrl(name, logo)}
             title={`${name} logo`}
           />
           <CardContent>
