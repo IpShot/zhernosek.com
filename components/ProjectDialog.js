@@ -6,11 +6,12 @@ import {
   DialogContent,
   DialogContentText,
   IconButton,
+  useMediaQuery,
 } from '@material-ui/core';
 import Zoom from 'react-medium-image-zoom';
 import { Skeleton } from '@material-ui/lab';
 import CloseIcon from '@material-ui/icons/Close';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { useImage } from 'react-image';
 
 const useStyles = makeStyles((theme) => ({
@@ -73,6 +74,9 @@ function Screenshot({ project, image }) {
 export default function ProjectDialog({ project, open, onClose }) {
   const { name, desc, details, url, images } = project;
   const classes = useStyles();
+  const theme = useTheme();
+  const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
+
   return (
     <Dialog
       open={open}
@@ -80,6 +84,8 @@ export default function ProjectDialog({ project, open, onClose }) {
       scroll="body"
       aria-labelledby="dialog-title"
       aria-describedby="dialog-description"
+      fullScreen={isSmallDevice}
+      transitionDuration={200}
     >
       <Box className={classes.header}>
         <DialogTitle id="dialog-title">
