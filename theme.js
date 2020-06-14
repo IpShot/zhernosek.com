@@ -5,6 +5,9 @@ const theme = responsiveFontSizes(createMuiTheme({
   palette: {
     type: 'dark',
     divider: 'rgba(255, 255, 255, 0.25)',
+    image: {
+      hover: 'rgba(0, 0, 0, 0.25)',
+    },
   },
   typography: {
     h1: {
