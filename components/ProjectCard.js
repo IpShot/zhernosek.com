@@ -47,7 +47,7 @@ export default function ProjectCard(project, idx) {
             title={`${name} logo`}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h3">
               {name}
             </Typography>
             <Typography noWrap variant="body2" color="textSecondary" component="p">
