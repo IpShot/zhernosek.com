@@ -13,6 +13,7 @@ export const SKILLS = {
     { name: 'Meteor', level: 4.5 },
     { name: 'Material UI', level: 4 },
     { name: 'Express', level: 4 },
+    { name: 'Flask', level: 4 },
     { name: 'Mocha', level: 4 },
     { name: 'Jest', level: 4 },
     { name: 'React Native', level: 3 },
@@ -28,6 +29,7 @@ export const SKILLS = {
     { name: 'Heroku', level: 5 },
     { name: 'Amazon S3', level: 5 },
     { name: 'Cloudflare', level: 4 },
+    { name: 'Galaxy', level: 4 },
     { name: 'Google Cloud Platform', level: 3 },
     { name: 'DigitalOcean', level: 3 },
     { name: 'Azure', level: 2 },
@@ -61,6 +63,7 @@ export const PORTFOLIO = [{
   search jobs by criterias and apply to them. Service was developed for Germany.',
   url: 'https://jobninja.com',
   images: ['landing', 'job search', 'job page', 'profile'],
+  stack: ['React', 'React Native', 'Flask', 'MongoDB', 'Heroku'],
 },{
   name: 'LightYear',
   desc: 'Courses and leadership trainings',
