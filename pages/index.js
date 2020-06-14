@@ -90,7 +90,7 @@ function Skill({ name, level }, idx) {
   return (
     <ListItem key={idx} alignItems="center" className={classes.skillItem}>
       <ListItemText disableTypography>
-        <Typography variant="h3">
+        <Typography component="span" variant="h3">
           {name}
         </Typography>
       </ListItemText>
@@ -117,7 +117,7 @@ function SkillsSection([ section, skills ], idx) {
         className={classes.skillsSectionName}
       >
         <ListItemText disableTypography className={classes.skillsSectionText}>
-          <Typography component="span" variant="h3">
+          <Typography component="h3" variant="h3">
             {section}
           </Typography>
         </ListItemText>

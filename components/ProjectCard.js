@@ -50,7 +50,7 @@ export default function ProjectCard(project, idx) {
             <Typography gutterBottom variant="h5" component="h3">
               {name}
             </Typography>
-            <Typography noWrap variant="body2" color="textSecondary" component="p">
+            <Typography noWrap variant="body2" component="p">
               {desc}
             </Typography>
           </CardContent>
