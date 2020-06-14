@@ -56,11 +56,11 @@ export default function ProjectCard(project, idx) {
           </CardContent>
         </CardActionArea>
       </Card>
-      {isDialogOpen && (
-        <ProjectDialog
-          project={project}
-          open={isDialogOpen}
-          onClose={handleCloseDialog} />)}
+      <ProjectDialog
+        project={project}
+        open={isDialogOpen}
+        onClose={handleCloseDialog}
+      />
     </Grid>
   );
 }
