@@ -100,9 +100,14 @@ export default function ProjectDialog({ project, open, onClose }) {
           <Typography component="h2" variant="h6">
             {name}
           </Typography>
-          <a href={url} className={classes.url} target="_blank">
-            {url}
-          </a>
+          {url &&
+            <a href={url} className={classes.url} target="_blank">
+              {url}
+            </a>}
+          {!url &&
+            <Typography variant="body2" color="secondary">
+              (project closed)
+            </Typography>}
         </DialogTitle>
         <IconButton onClick={onClose} className={classes.closeBtn} aria-label="close">
           <CloseIcon />
