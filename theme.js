@@ -10,7 +10,8 @@ const theme = responsiveFontSizes(createMuiTheme({
     },
     text: {
       primary: 'rgba(255, 255, 255, 0.75)',
-      highlight: 'rgba(255, 255, 255, 0.95)',
+      highlight: 'rgba(255, 255, 255, 0.9)',
+      gold: 'rgba(255, 183, 77, 0.95)',
     },
   },
   typography: {
@@ -21,7 +22,7 @@ const theme = responsiveFontSizes(createMuiTheme({
     h2: {
       fontSize: '1.75rem',
       fontWeight: 400,
-      color: '#ffb74d',
+      color: 'rgba(255, 183, 77, 1)',
     },
     h3: {
       fontSize: '1.125rem',
