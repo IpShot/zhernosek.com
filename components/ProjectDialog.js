@@ -5,6 +5,7 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
+  Typography,
   IconButton,
   useMediaQuery,
 } from '@material-ui/core';
@@ -18,12 +19,19 @@ const useStyles = makeStyles((theme) => ({
   header: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
   closeBtn: {
     height: 48,
     width: 48,
+    marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
+  },
+  url: {
+    color: theme.palette.text.secondary,
+    outline: 'none',
+    '&:focus,&:hover': {
+      backgroundColor: theme.palette.action.hover,
+    },
   },
   screenshotContainer: {
     paddingTop: theme.spacing(3),
@@ -31,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
       outline: 'none',
       transitionDuration: '0.25s',
       '&:focus,&:hover': {
-        backgroundColor: `rgba(0, 0, 0, 0.25)`,
+        backgroundColor: theme.palette.image.hover,
       },
     },
   },
@@ -72,7 +80,7 @@ function Screenshot({ project, image }) {
 }
 
 export default function ProjectDialog({ project, open, onClose }) {
-  const { name, desc, details, url, images } = project;
+  const { name, desc, tech, details, url, images } = project;
   const classes = useStyles();
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
@@ -88,8 +96,13 @@ export default function ProjectDialog({ project, open, onClose }) {
       transitionDuration={200}
     >
       <Box className={classes.header}>
-        <DialogTitle id="dialog-title">
-          {name}
+        <DialogTitle id="dialog-title" disableTypography>
+          <Typography component="h2" variant="h6">
+            {name}
+          </Typography>
+          <a href={url} className={classes.url} target="_blank">
+            {url}
+          </a>
         </DialogTitle>
         <IconButton onClick={onClose} className={classes.closeBtn} aria-label="close">
           <CloseIcon />
