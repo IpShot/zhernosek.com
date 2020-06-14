@@ -33,6 +33,13 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.action.hover,
     },
   },
+  pTitle: {
+    color: theme.palette.text.gold,
+    fontWeight: 'bold',
+  },
+  stack: {
+    color: theme.palette.text.highlight,
+  },
   screenshotContainer: {
     paddingTop: theme.spacing(3),
     '& [aria-label="Zoom image"]': {
@@ -79,8 +86,18 @@ function Screenshot({ project, image }) {
   );
 }
 
+function Stack({ stack }) {
+  const classes = useStyles();
+  return Array.isArray(stack) && stack.length > 0 && (
+    <Typography component="p" variant="h6">
+      <span className={classes.pTitle}>Stack: </span>
+      <span className={classes.stack}>{stack.join(', ')}</span>
+    </Typography>
+  );
+}
+
 export default function ProjectDialog({ project, open, onClose }) {
-  const { name, desc, tech, details, url, images } = project;
+  const { name, desc, stack, details, url, images } = project;
   const classes = useStyles();
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
@@ -97,7 +114,7 @@ export default function ProjectDialog({ project, open, onClose }) {
     >
       <Box className={classes.header}>
         <DialogTitle id="dialog-title" disableTypography>
-          <Typography component="h2" variant="h6">
+          <Typography component="h3" variant="h5">
             {name}
           </Typography>
           {url &&
@@ -114,6 +131,8 @@ export default function ProjectDialog({ project, open, onClose }) {
         </IconButton>
       </Box>
       <DialogContent>
+        <Stack stack={stack} />
+        <br />
         <DialogContentText id="dialog-description">
           {details}
         </DialogContentText>
