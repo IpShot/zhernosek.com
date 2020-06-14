@@ -1,18 +1,28 @@
 import {
+  Box,
   Grid,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogContentText,
+  IconButton,
 } from '@material-ui/core';
 import Zoom from 'react-medium-image-zoom';
 import { Skeleton } from '@material-ui/lab';
+import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
 import { useImage } from 'react-image';
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    paddingTop: theme.spacing(6),
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  closeBtn: {
+    height: 48,
+    width: 48,
+    marginRight: theme.spacing(1),
   },
   screenshotContainer: {
     paddingTop: theme.spacing(3),
@@ -71,7 +81,14 @@ export default function ProjectDialog({ project, open, onClose }) {
       aria-labelledby="dialog-title"
       aria-describedby="dialog-description"
     >
-      <DialogTitle id="dialog-title">{name}</DialogTitle>
+      <Box className={classes.header}>
+        <DialogTitle id="dialog-title">
+          {name}
+        </DialogTitle>
+        <IconButton onClick={onClose} className={classes.closeBtn} aria-label="close">
+          <CloseIcon />
+        </IconButton>
+      </Box>
       <DialogContent>
         <DialogContentText id="dialog-description">
           {details}
