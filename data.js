@@ -45,6 +45,7 @@ export const SKILLS = {
     { name: 'Google Analytics', level: 5 },
     { name: 'Stripe', level: 5 },
     { name: 'OneSignal', level: 4 },
+    { name: 'Twilio', level: 4 },
     { name: 'Mixpanel', level: 4 },
     { name: 'Telegram Bot', level: 4 },
     { name: 'Yandex.Metrica', level: 4 },
