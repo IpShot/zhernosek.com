@@ -140,7 +140,7 @@ export const PORTFOLIO = [{
 
 export const FEEDBACKS = [{
   project: 'JobNinja',
-  text: 'Roman has worked with us to relaunch our platform in 2017. \
+  feedback: 'Roman has worked with us to relaunch our platform in 2017. \
   It did a very good work, was always available and working 10+ hours per day. \
   Roman is pretty easy to work with: it is always "ok I see, no problem, I\'ll do it!". \
   However, he\'ll never sacrifice the code quality and is very perfectionist: I can remember once: \
@@ -150,7 +150,7 @@ export const FEEDBACKS = [{
   That\'s a very good point when you rely on this software for your daily business.',
 },{
   project: 'MiID',
-  text: 'Roman is a young and talented individual which brought \
+  feedback: 'Roman is a young and talented individual which brought \
   a lot of quality to Mi ID. He is very driven and always willing \
   to work to deliver on time. Despite his age he was one of our best \
   engineers and so on he took his senior role very seriously in order \
@@ -159,18 +159,19 @@ export const FEEDBACKS = [{
   surely crossing paths in the future to build something great again.',
 },{
   project: 'Briefly',
-  text: 'Roman is a truly good freelancer, very flexible and able to work 60 hours a week to meet a deadline. \
+  feedback: 'Roman is a truly good freelancer, very flexible and able to work 60 hours a week to meet a deadline. \
   I can read through the code he writes without any problem and so does my whole team. \
   The code he writes is modular and scalable and respects the best practices set by the industry. \
   I warmly recommend Roman if you need a solid frontend :)',
 },{
   project: 'Teem',
-  text: 'Roman is awesome. He\'s fast. But more importantly, he cares about the work he does. \
+  feedback: 'Roman is awesome. He\'s fast. But more importantly, he cares about the work he does. \
   And that makes all the difference. For example, frustrated with performance issues, he knocked them out. \
   Would highly recommend!',
 },{
   project: 'LightYear',
-  text: 'Roman is a great programmer. He is always aiming for excellence and that\'s not easy to find out there. \
+  logo: 'logo.svg',
+  feedback: 'Roman is a great programmer. He is always aiming for excellence and that\'s not easy to find out there. \
   We will keep working for long.',
 }]
 

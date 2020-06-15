@@ -13,9 +13,10 @@ import {
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Rating } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
-import { SKILLS, PORTFOLIO } from '../data';
+import { SKILLS, PORTFOLIO, FEEDBACKS } from '../data';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
+import Feedback from '../components/Feedback';
 
 const useStyles = makeStyles((theme) => ({
   gridContainer: {
@@ -40,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   skillsList: {
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(1),
     paddingBottom: 0,
   },
   skillsSectionName: {
@@ -55,6 +56,10 @@ const useStyles = makeStyles((theme) => ({
   },
   portfolioList: {
     paddingTop: theme.spacing(2),
+  },
+  feedbacksList: {
+    paddingTop: theme.spacing(2),
+    paddingBottom: 0,
   },
 }));
 
@@ -163,12 +168,16 @@ function Portfolio() {
 }
 
 function Feedbacks() {
+  const classes = useStyles();
   return (
     <Box pt={6}>
       <Typography variant="h2" gutterBottom>
         Feedbacks
       </Typography>
       <Divider />
+      <List className={classes.feedbacksList}>
+        {FEEDBACKS.map(Feedback)}
+      </List>
     </Box>
   );
 }
