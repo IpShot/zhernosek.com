@@ -59,6 +59,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: theme.borderRadius,
     backgroundColor: theme.palette.action.hover,
   },
+  description: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(4),
+  },
   screenshotContainer: {
     paddingTop: theme.spacing(3),
     '& [aria-label="Zoom image"]': {
@@ -164,11 +168,9 @@ export default function ProjectDialog({ project, open, onClose }) {
       </Box>
       <DialogContent>
         <Stack array={stack} />
-        <br />
-        <DialogContentText id="dialog-description">
+        <DialogContentText id="dialog-description" className={classes.description}>
           {details}
         </DialogContentText>
-        <br />
         <Grid container spacing={1}>
           {images && images.map((img, idx) =>
             <Screenshot key={idx} project={name} image={img} />
