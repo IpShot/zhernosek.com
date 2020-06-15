@@ -28,6 +28,7 @@ export const SKILLS = {
   CLOUD: [
     { name: 'Heroku', level: 5 },
     { name: 'Amazon S3', level: 5 },
+    { name: 'Cloudinary', level: 4 },
     { name: 'Cloudflare', level: 4 },
     { name: 'Galaxy', level: 4 },
     { name: 'Google Cloud Platform', level: 3 },
@@ -42,14 +43,22 @@ export const SKILLS = {
   ],
   INTEGRATIONS: [
     { name: 'Mailchimp', level: 5 },
+    { name: 'SendGrid', level: 5 },
     { name: 'Google Analytics', level: 5 },
     { name: 'Stripe', level: 5 },
-    { name: 'OneSignal', level: 4 },
-    { name: 'Twilio', level: 4 },
+    { name: 'OneSignal', level: 5 },
+    { name: 'FullStory', level: 5 },
+    { name: 'Facebook Pixel', level: 4 },
     { name: 'Mixpanel', level: 4 },
+    { name: 'Intercom', level: 4 },
+    { name: 'Mailgun', level: 4 },
+    { name: 'Twilio', level: 4 },
+    { name: 'Crisp', level: 4 },
+    { name: 'ViralLoops', level: 4 },
     { name: 'Telegram Bot', level: 4 },
     { name: 'Yandex.Metrica', level: 4 },
     { name: 'Yandex.Checkout', level: 4 },
+    { name: 'G Suit', level: 3.5 },
     { name: 'Google Maps', level: 3 },
   ],
   // OTHER: [
@@ -64,13 +73,20 @@ export const PORTFOLIO = [{
   search jobs by criterias and apply to them. Service was developed for Germany.',
   url: 'https://jobninja.com',
   images: ['landing', 'job search', 'job page', 'profile'],
-  stack: ['React', 'React Native', 'Flask', 'MongoDB', 'Heroku'],
+  stack: [
+    'React', 'React Native', 'Flask', 'MongoDB', 'Heroku',
+    'Mixpanel', 'FullStory', 'Facebook Pixel', 'Google Analytics'
+  ],
 },{
   name: 'LightYear',
   desc: 'Courses and leadership trainings',
   details: '',
   url: 'https://lightyear.co',
   logo: 'logo.svg',
+  stack: [
+    'Meteor', 'MongoDB', 'Galaxy', 'Stripe', 'SendGrid',
+    'Intercom', 'Cloudinary', 'Amazon S3'
+  ],
 },{
   name: 'MiID',
   desc: 'Customizable products marketplace',
@@ -84,6 +100,7 @@ export const PORTFOLIO = [{
     'landing', 'brand page', 'customization', 'cart', 'order info',
     'shopping history', 'account', 'public profile'
   ],
+  stack: ['React', 'Express', 'MongoDB'],
 },{
   name: 'Teem',
   desc: 'The US schools platform',
@@ -96,6 +113,10 @@ export const PORTFOLIO = [{
   images: [
     'landing', 'sign in', 'school staffs list', 'create new topic', 'topic channel',
     'notifications', 'global search', 'schools list (admin)', 'school topics (admin)'
+  ],
+  stack: [
+    'React', 'Meteor', 'MongoDB', 'Cordova', 'Electron','G Suit',
+    'Mixpanel', 'OneSignal', 'Mailchimp', 'Amazon S3', 'Heroku'
   ],
 },{
   name: 'Briefly',
@@ -110,6 +131,10 @@ export const PORTFOLIO = [{
     'chat', 'image comments', 'brand assets', 'creator assets', 'payments',
     'receipt', 'admin brands list', 'admin brand info', 'admin creators list',
     'admin creator reviews', 'admin projects list', 'admin project financials'
+  ],
+  stack: [
+    'React', 'Express', 'MongoDB', 'FullStory', 'OneSignal',
+    'Intercom', 'Mailgun', 'Amazon S3'
   ],
 }]
 
