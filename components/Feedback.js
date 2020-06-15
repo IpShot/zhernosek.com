@@ -41,7 +41,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#fff',
     '& img': {
       objectFit: 'contain',
-    }
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: 40,
+      width: 40,
+    },
   }),
 }));
 
