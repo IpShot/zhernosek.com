@@ -94,7 +94,9 @@ function Screenshot({ project, image }) {
           width="100%"
           height="195px" />}
       {!isLoading &&
-        <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
+        <Zoom
+          overlayBgColorEnd="rgba(0, 0, 0, 0.7)"
+          wrapStyle={{ border: '1px solid rgba(255, 255, 255, 0.7)', }}>
           <img
             src={src}
             className={classes.screenshot}
