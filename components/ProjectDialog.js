@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pTitle: {
-    fontSize: '1.2rem',
+    fontSize: '1.1rem',
     fontWeight: 'bold',
     color: theme.palette.text.gold,
-    paddingTop: 9,
+    paddingTop: 10,
     paddingRight: theme.spacing(1),
   },
   stack: {
@@ -168,6 +168,7 @@ export default function ProjectDialog({ project, open, onClose }) {
         <DialogContentText id="dialog-description">
           {details}
         </DialogContentText>
+        <br />
         <Grid container spacing={1}>
           {images && images.map((img, idx) =>
             <Screenshot key={idx} project={name} image={img} />
