@@ -2,6 +2,7 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 // Create a theme instance.
 const theme = responsiveFontSizes(createMuiTheme({
+  borderRadius: 4,
   palette: {
     type: 'dark',
     divider: 'rgba(255, 255, 255, 0.25)',
