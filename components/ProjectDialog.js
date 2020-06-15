@@ -34,11 +34,30 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   pTitle: {
-    color: theme.palette.text.gold,
+    fontSize: '1.2rem',
     fontWeight: 'bold',
+    color: theme.palette.text.gold,
+    paddingTop: 9,
+    paddingRight: theme.spacing(1),
   },
   stack: {
+    display: 'flex',
+    alignItems: 'flex-start',
+  },
+  stackArray: {
+    display: 'flex',
+    flexWrap: 'wrap',
     color: theme.palette.text.highlight,
+  },
+  tagContainer: {
+    display: 'inline-block',
+    padding: theme.spacing(0.5),
+  },
+  tag: {
+    display: 'block',
+    padding: theme.spacing(1),
+    borderRadius: theme.borderRadius,
+    backgroundColor: theme.palette.action.hover,
   },
   screenshotContainer: {
     paddingTop: theme.spacing(3),
@@ -86,12 +105,23 @@ function Screenshot({ project, image }) {
   );
 }
 
-function Stack({ stack }) {
+function Tag(tag, idx) {
   const classes = useStyles();
-  return Array.isArray(stack) && stack.length > 0 && (
-    <Typography component="p" variant="h6">
+  return (
+    <span key={idx} className={classes.tagContainer}>
+      <span className={classes.tag}>
+        {tag}
+      </span>
+    </span>
+  );
+}
+
+function Stack({ array }) {
+  const classes = useStyles();
+  return Array.isArray(array) && array.length > 0 && (
+    <Typography component="p" className={classes.stack}>
       <span className={classes.pTitle}>Stack: </span>
-      <span className={classes.stack}>{stack.join(', ')}</span>
+      <span className={classes.stackArray}>{array.map(Tag)}</span>
     </Typography>
   );
 }
@@ -131,7 +161,7 @@ export default function ProjectDialog({ project, open, onClose }) {
         </IconButton>
       </Box>
       <DialogContent>
-        <Stack stack={stack} />
+        <Stack array={stack} />
         <br />
         <DialogContentText id="dialog-description">
           {details}
