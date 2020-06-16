@@ -7,21 +7,6 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-function getAvatarPadding(project, theme) {
-  switch (project) {
-    case 'Teem':
-      return 10;
-    case 'JobNinja':
-      return 8;
-    case 'MiID':
-      return 4;
-    case 'LightYear':
-      return 2;
-    default:
-      return 0;
-  }
-}
-
 const useStyles = makeStyles((theme) => ({
   container: {
     alignItems: 'flex-start',
@@ -32,42 +17,37 @@ const useStyles = makeStyles((theme) => ({
     },
     backgroundColor: theme.palette.background.paper,
   },
-  avatar: ({ project }) => ({
+  avatar: {
     height: 60,
     width: 60,
-    padding: getAvatarPadding(project, theme),
     marginRight: theme.spacing(2),
     marginTop: theme.spacing(1),
-    backgroundColor: '#fff',
-    '& img': {
-      objectFit: 'contain',
-    },
     [theme.breakpoints.down('xs')]: {
       height: 40,
       width: 40,
     },
-  }),
+  },
 }));
 
-function getLogoUrl(project = 'default', logo = 'logo.png') {
-  return `/${project.toLowerCase()}/${logo}`;
+function getAvatarUrl(project = 'default') {
+  return `/${project.toLowerCase()}/owner.jpeg`;
 }
 
 export default function Feedback(data, idx) {
-  const { project, logo, feedback } = data;
-  const classes = useStyles({ project });
+  const { project, feedback, owner } = data;
+  const classes = useStyles();
   return (
     <ListItem key={idx} alignItems="center" className={classes.container}>
       <ListItemIcon>
         <Avatar
-          alt={project}
-          src={getLogoUrl(project, logo)}
+          alt={owner}
+          src={getAvatarUrl(project)}
           className={classes.avatar} />
       </ListItemIcon>
       <ListItemText
         primary={
           <Typography component="span" variant="h6" display="block">
-            {project}
+            {owner} @ {project}
           </Typography>}
         secondary={
           <Typography component="span">

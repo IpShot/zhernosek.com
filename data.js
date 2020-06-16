@@ -140,6 +140,7 @@ export const PORTFOLIO = [{
 
 export const FEEDBACKS = [{
   project: 'JobNinja',
+  owner: 'Laurent Meyer, CTO',
   feedback: 'Roman has worked with us to relaunch our platform in 2017. \
   It did a very good work, was always available and working 10+ hours per day. \
   Roman is pretty easy to work with: it is always "ok I see, no problem, I\'ll do it!". \
@@ -150,6 +151,7 @@ export const FEEDBACKS = [{
   That\'s a very good point when you rely on this software for your daily business.',
 },{
   project: 'MiID',
+  owner: 'Nestor Sanchez, CTO',
   feedback: 'Roman is a young and talented individual which brought \
   a lot of quality to Mi ID. He is very driven and always willing \
   to work to deliver on time. Despite his age he was one of our best \
@@ -159,17 +161,20 @@ export const FEEDBACKS = [{
   surely crossing paths in the future to build something great again.',
 },{
   project: 'Briefly',
+  owner: 'Kirk Bridger, PM',
   feedback: 'Roman is a truly good freelancer, very flexible and able to work 60 hours a week to meet a deadline. \
   I can read through the code he writes without any problem and so does my whole team. \
   The code he writes is modular and scalable and respects the best practices set by the industry. \
   I warmly recommend Roman if you need a solid frontend :)',
 },{
   project: 'Teem',
+  owner: 'Kevin Jenkins, CEO',
   feedback: 'Roman is awesome. He\'s fast. But more importantly, he cares about the work he does. \
   And that makes all the difference. For example, frustrated with performance issues, he knocked them out. \
   Would highly recommend!',
 },{
   project: 'LightYear',
+  owner: 'Igsaan Salie, PM',
   logo: 'logo.svg',
   feedback: 'Roman is a great programmer. He is always aiming for excellence and that\'s not easy to find out there. \
   We will keep working for long.',
@@ -177,7 +182,7 @@ export const FEEDBACKS = [{
 
 export const OWN_PROJECTS = [{
   name: 'StudyTime',
-  desc: 'The best timetable for students',
+  desc: 'Timetable for students',
   details: 'Client needed to develop a cross-platform application with responsive web. \
   Also, he needed a little simple landing. The project aimed to provide to students \
   with a usable and beautiful timetable, which will be available from any devices.\
@@ -188,8 +193,8 @@ export const OWN_PROJECTS = [{
   The web app was wrapped as mobile apps (Android, iOS) by Cordova and as desktop apps (MacOS, Linux, Windows) by Electron.',
 }, {
   name: 'TBBE',
-  desc: 'Learn English by watching TV shows you love',
+  desc: 'Learn English watching TV shows',
 }, {
   name: 'Words Explorer',
-  desc: 'Explore new English words',
+  desc: 'Deep English words learning',
 }]
