@@ -13,7 +13,7 @@ import {
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Rating } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
-import { SKILLS, PORTFOLIO, FEEDBACKS } from '../data';
+import { SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
 import Feedback from '../components/Feedback';
@@ -183,12 +183,16 @@ function Feedbacks() {
 }
 
 function OwnProjects() {
+  const classes = useStyles();
   return (
     <Box pt={6}>
       <Typography variant="h2" gutterBottom>
         Own Projects
       </Typography>
       <Divider />
+      <Grid container spacing={2} className={classes.portfolioList}>
+        {OWN_PROJECTS.map(ProjectCard)}
+      </Grid>
     </Box>
   );
 }
