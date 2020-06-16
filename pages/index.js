@@ -31,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     height: 200,
     width: 200,
+    border: theme.imageBorder,
     [theme.breakpoints.down('xs')]: {
       height: 150,
       width: 150,
