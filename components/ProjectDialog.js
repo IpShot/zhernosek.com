@@ -89,6 +89,8 @@ function Screenshot({ project, image }) {
     useSuspense: false,
   });
   const classes = useStyles();
+  const theme = useTheme();
+  
   return (
     <Grid item sm={6} xs={12} className={classes.screenshotContainer}>
       {isLoading &&
@@ -100,7 +102,7 @@ function Screenshot({ project, image }) {
       {!isLoading &&
         <Zoom
           overlayBgColorEnd="rgba(0, 0, 0, 0.7)"
-          wrapStyle={{ border: '1px solid rgba(255, 255, 255, 0.7)', }}>
+          wrapStyle={{ border: theme.imageBorder }}>
           <img
             src={src}
             className={classes.screenshot}
