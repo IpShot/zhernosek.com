@@ -47,7 +47,7 @@ export default function Feedback(data, idx) {
       <ListItemText
         primary={
           <Typography component="span" variant="h6" display="block">
-            {owner} @ {project}
+            {owner} @&nbsp;{project}
           </Typography>}
         secondary={
           <Typography component="span">
