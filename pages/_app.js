@@ -17,7 +17,6 @@ export default function App({ Component, pageProps }) {
   return (
     <React.Fragment>
     <Head>
-      <title>Roman Zhernosek - Full stack web developer</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
