@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { PROFILE } from '../data';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -10,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Layout({
   children,
-  title = 'Roman Zhernosek - Full stack web developer'
+  title = `${PROFILE.Who} - ${PROFILE.Profession}`
 }) {
   const classes = useStyles();
   return (
