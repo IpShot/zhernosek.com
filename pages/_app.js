@@ -3,6 +3,7 @@ import Head from 'next/head';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
+import fonts from '../fonts';
 import 'react-medium-image-zoom/dist/styles.css';
 
 export default function App({ Component, pageProps }) {
@@ -19,7 +20,7 @@ export default function App({ Component, pageProps }) {
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" />
+      <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />
     </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
