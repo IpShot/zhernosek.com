@@ -3,43 +3,55 @@ import {
   Grid,
   Avatar,
   Typography,
+  Link,
   List,
   ListItem,
   ListItemText,
   ListItemIcon,
   Collapse,
   Divider,
+  useMediaQuery,
 } from '@material-ui/core';
 import { ExpandMore, ExpandLess } from '@material-ui/icons';
 import { Rating } from '@material-ui/lab';
-import { makeStyles } from '@material-ui/core/styles';
-import { SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
 import ProjectCard from '../components/ProjectCard';
 import Feedback from '../components/Feedback';
 
 const useStyles = makeStyles((theme) => ({
-  gridContainer: {
-    flexGrow: 1,
-    overflow: 'hidden',
-    boxSizing: 'border-box',
-  },
-  gridItem: {
-    height: '100%',
-    boxSizing: 'border-box',
-  },
   avatar: {
     height: 200,
     width: 200,
-    border: theme.imageBorder,
-    [theme.breakpoints.down('xs')]: {
+    '@media (max-width: 350px)': {
       height: 150,
       width: 150,
     },
-    '@media (max-width: 350px)': {
-      height: 120,
-      width: 120,
+  },
+  profile: {
+    display: 'flex',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
     },
+  },
+  about: {
+    paddingLeft: theme.spacing(6),
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: theme.spacing(3),
+      paddingLeft: 0,
+      width: '100%',
+    },
+  },
+  aboutLine: {
+    padding: 0,
+    paddingBottom: 4,
+    alignItems: 'flex-start',
+  },
+  aboutLineValue: {
+    color: theme.palette.text.highlight,
+    paddingLeft: theme.spacing(1),
   },
   skillsList: {
     paddingTop: theme.spacing(1),
@@ -64,30 +76,77 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function About() {
+function getAboutValue(key) {
+  const value = PROFILE[key];
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function getAboutValueTypographyComponent(key) {
+  switch (key) {
+    case 'Profession':
+      return 'h1';
+    case 'Humor':
+      return 'a';
+    default:
+      return 'span';
+  }
+}
+
+function getAboutValueLinkParamsIfUrl(key) {
+  const value = PROFILE[key];
+  if (Array.isArray(value) && value[1]) {
+    return {
+      href: 'https://youtu.be/p3PfKf0ndik',
+      target: '_blank',
+      rel: 'noopener',
+    };
+  } else {
+    return {};
+  }
+}
+
+function AboutLine(key, idx) {
+  const classes = useStyles();
   return (
-    <Typography component="span" gutterBottom>
-      Hello my dear visitor
-    </Typography>
+    <ListItem disableGutters key={idx} className={classes.aboutLine}>
+      <Typography component="span" className={classes.aboutLineKey}>
+        {key}:
+      </Typography>
+      <Typography
+      className={classes.aboutLineValue}
+        component={getAboutValueTypographyComponent(key)}
+        {...getAboutValueLinkParamsIfUrl(key)}
+      >
+        {getAboutValue(key)}
+      </Typography>
+    </ListItem>
+  );
+}
+
+function About() {
+  const classes = useStyles();
+  return (
+    <List disablePadding className={classes.about}>
+      {Object.keys(PROFILE).map(AboutLine)}
+    </List>
   );
 }
 
 function Profile() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
   return (
-    <Grid container className={classes.gridContainer}>
-      <Grid item xs={6} className={classes.gridItem}>
-        <Avatar
-          alt="Roman Zhernosek"
-          src="/avatar.jpeg"
-          variant="rounded"
-          className={classes.avatar}
-        />
-      </Grid>
-      <Grid item xs={6} className={classes.gridItem}>
-        <About />
-      </Grid>
-    </Grid>
+    <Box className={classes.profile}>
+      <Avatar
+        alt={PROFILE.Who}
+        src="/avatar.jpeg"
+        variant="rounded"
+        className={classes.avatar}
+      />
+      <Divider orientation={isSmallDevice ? 'horizontal' : 'vertical'} />
+      <About />
+    </Box>
   );
 }
 
