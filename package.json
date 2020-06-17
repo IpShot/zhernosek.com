@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "serve": "serve out"
   },
   "dependencies": {
     "@material-ui/core": "^4.10.1",
@@ -14,6 +15,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-image": "^4.0.1",
-    "react-medium-image-zoom": "^4.3.1"
+    "react-medium-image-zoom": "^4.3.1",
+    "serve": "^11.3.2"
   }
 }
