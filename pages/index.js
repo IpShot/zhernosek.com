@@ -1,7 +1,6 @@
 import {
   Box,
   Grid,
-  Avatar,
   Typography,
   Link,
   List,
@@ -17,18 +16,11 @@ import { Rating } from '@material-ui/lab';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
+import Avatar from '../components/Avatar';
 import ProjectCard from '../components/ProjectCard';
 import Feedback from '../components/Feedback';
 
 const useStyles = makeStyles((theme) => ({
-  avatar: {
-    height: 200,
-    width: 200,
-    '@media (max-width: 350px)': {
-      height: 150,
-      width: 150,
-    },
-  },
   profile: {
     display: 'flex',
     [theme.breakpoints.down('xs')]: {
@@ -138,12 +130,7 @@ function Profile() {
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <Box className={classes.profile}>
-      <Avatar
-        alt={PROFILE.Who}
-        src="/avatar.jpeg"
-        variant="rounded"
-        className={classes.avatar}
-      />
+      <Avatar alt={PROFILE.Who} image="/avatar.jpeg" />
       <Divider orientation={isSmallDevice ? 'horizontal' : 'vertical'} />
       <About />
     </Box>
