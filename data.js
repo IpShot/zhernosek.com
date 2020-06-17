@@ -1,3 +1,18 @@
+export const PROFILE = {
+  Who: 'Roman Zhernosek',
+  Age: 27,
+  Sex: 'Male',
+  Profession: 'Full\xa0Stack Web\xa0Developer',
+  Experience: '5+ years',
+  Perfectionist: '99%',
+  Minimalist: '95%',
+  Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
+  Lifestye: 'Healthy',
+  Care: 'Family, Nature',
+  Sports: 'Swimming, Volleyball, Boxing',
+  Location: 'Saint\xa0Petersburg, Russia',
+}
+
 export const SKILLS = {
   LANGUAGES: [
     { name: 'HTML', level: 5 },
@@ -20,6 +35,7 @@ export const SKILLS = {
     { name: 'Bootstrap', level: 3 },
     { name: 'Eve', level: 2 },
     { name: 'Angular', level: 2 },
+    { name: 'Onsen UI', level: 2 },
   ],
   DATABASE: [
     { name: 'MongoDB', level: 5 },
@@ -191,10 +207,18 @@ export const OWN_PROJECTS = [{
   - App backend: Meteor, MongoDB\
   - App frontend: AngularJS, OnsenUI, Stylus, MarsDB\
   The web app was wrapped as mobile apps (Android, iOS) by Cordova and as desktop apps (MacOS, Linux, Windows) by Electron.',
+  images: [ 'desktop', 'timetable' ],
+  stack: [ 'Angular', 'Onsen UI', 'Meteor', 'MongoDB', 'Cordova', 'Electron' ],
 }, {
   name: 'TBBE',
   desc: 'Learn English watching TV shows',
+  stack: [
+    'React', 'Eve', 'MongoDB', 'Crisp', 'Mailchimp', 'Yandex.Checkout',
+    'Yandex.Metrica', 'Google Analytics', 'FullStory'
+  ],
 }, {
   name: 'Words Explorer',
   desc: 'Deep English words learning',
+  url: 'https://words.tbbe.ru',
+  stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
 }]
