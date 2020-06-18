@@ -17,6 +17,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
 import Avatar from '../components/Avatar';
+import About from '../components/About';
 import ProjectCard from '../components/ProjectCard';
 import Feedback from '../components/Feedback';
 
@@ -28,22 +29,9 @@ const useStyles = makeStyles((theme) => ({
       alignItems: 'center',
     },
   },
-  about: {
-    paddingLeft: theme.spacing(6),
-    [theme.breakpoints.down('xs')]: {
-      paddingTop: theme.spacing(3),
-      paddingLeft: 0,
-      width: '100%',
-    },
-  },
-  aboutLine: {
-    padding: 0,
-    paddingBottom: 4,
-    alignItems: 'flex-start',
-  },
-  aboutLineValue: {
-    color: theme.palette.text.highlight,
-    paddingLeft: theme.spacing(1),
+  profileDivider: {
+    background: 'transparent',
+    margin: theme.spacing(0, 3),
   },
   skillsList: {
     paddingTop: theme.spacing(1),
@@ -68,70 +56,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function getAboutValue(key) {
-  const value = PROFILE[key];
-  return Array.isArray(value) ? value[0] : value;
-}
-
-function getAboutValueTypographyComponent(key) {
-  switch (key) {
-    case 'Profession':
-      return 'h1';
-    case 'Humor':
-      return 'a';
-    default:
-      return 'span';
-  }
-}
-
-function getAboutValueLinkParamsIfUrl(key) {
-  const value = PROFILE[key];
-  if (Array.isArray(value) && value[1]) {
-    return {
-      href: 'https://youtu.be/p3PfKf0ndik',
-      target: '_blank',
-      rel: 'noopener',
-    };
-  } else {
-    return {};
-  }
-}
-
-function AboutLine(key, idx) {
-  const classes = useStyles();
-  return (
-    <ListItem disableGutters key={idx} className={classes.aboutLine}>
-      <Typography component="span" className={classes.aboutLineKey}>
-        {key}:
-      </Typography>
-      <Typography
-      className={classes.aboutLineValue}
-        component={getAboutValueTypographyComponent(key)}
-        {...getAboutValueLinkParamsIfUrl(key)}
-      >
-        {getAboutValue(key)}
-      </Typography>
-    </ListItem>
-  );
-}
-
-function About() {
-  const classes = useStyles();
-  return (
-    <List disablePadding className={classes.about}>
-      {Object.keys(PROFILE).map(AboutLine)}
-    </List>
-  );
-}
-
 function Profile() {
   const classes = useStyles();
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <Box className={classes.profile}>
-      <Avatar alt={PROFILE.Who} image="/avatar.jpeg" />
-      <Divider orientation={isSmallDevice ? 'horizontal' : 'vertical'} />
+      <Box flexDirection="column">
+        <Avatar alt={PROFILE.Who} image="/avatar.jpeg" />
+      </Box>
+      <Divider
+        flexItem
+        orientation={isSmallDevice ? 'horizontal' : 'vertical'}
+        className={classes.profileDivider}
+      />
       <About />
     </Box>
   );
