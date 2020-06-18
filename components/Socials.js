@@ -8,34 +8,32 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  link: {
+  github: {
     marginTop: theme.spacing(2),
     outline: 'none',
-    '&.github-link': {
-      height: 40.96,
-      '&:hover, &:focus': {
-        '& .github-icon': {
-          fill: theme.palette.text.primary,
-        },
-      },
+    height: 40.96,
+    color: theme.palette.text.highlight,
+    '&:hover, &:focus': {
+      color: theme.palette.text.primary,
     },
-    '&.linkedin-link': {
-      height: 25.39,
-      '&:hover, &:focus': {
-        '& .linkedin-icon-letter': {
-          fill: theme.palette.text.primary,
-        },
-      },
+  },
+  linkedin: {
+    marginTop: theme.spacing(2),
+    outline: 'none',
+    height: 25.39,
+    color: theme.palette.text.highlight,
+    '&:hover, &:focus': {
+      color: theme.palette.text.primary,
     },
   },
 }));
 
-function Link({ href, className, children }) {
+function Link({ social, href, children }) {
   const classes = useStyles();
   return (
     <a
       href={href}
-      className={classnames(classes.link, className)}
+      className={classes[social]}
       rel="noopener"
       target="_blank"
     >
@@ -48,10 +46,10 @@ export default function Socials({ links }) {
   const classes = useStyles();
   return (
     <div className={classes.socials}>
-      <Link href={links.linkedin} className="linkedin-link">
+      <Link social="linkedin" href={links.linkedin}>
         <LinkedinIcon />
       </Link>
-      <Link href={links.github} className="github-link">
+      <Link social="github" href={links.github}>
         <GithubIcon />
       </Link>
     </div>
