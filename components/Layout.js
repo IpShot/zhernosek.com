@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Layout({
   children,
-  title = `${PROFILE.Who} - ${PROFILE.Profession}`
+  title = `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession}`
 }) {
   const classes = useStyles();
   return (

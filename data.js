@@ -1,16 +1,21 @@
 export const PROFILE = {
-  Who: 'Roman Zhernosek',
-  Age: 27,
-  Sex: 'Male',
-  Profession: 'Full\xa0Stack Web\xa0Developer',
-  Experience: '5+ years',
-  Perfectionist: '99%',
-  Minimalist: '95%',
-  Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
-  Lifestye: 'Healthy',
-  Care: 'Family, Nature',
-  Sports: 'Swimming, Volleyball, Boxing',
-  Location: 'Saint\xa0Petersburg, Russia',
+  ABOUT: {
+    Who: 'Roman Zhernosek',
+    Age: 27,
+    Profession: 'Full\xa0Stack Web\xa0Developer',
+    Experience: '5+ years',
+    Perfectionist: '99%',
+    Minimalist: '95%',
+    Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
+    Lifestye: 'Healthy',
+    Care: 'Family, Nature',
+    Sports: 'Swimming, Volleyball, Boxing',
+    Location: 'Saint\xa0Petersburg, Russia',
+  },
+  SOCIALS: {
+    github: 'https://github.com/IpShot',
+    linkedin: 'https://www.linkedin.com/in/zhernosek-roman',
+  },
 }
 
 export const SKILLS = {
@@ -25,6 +30,7 @@ export const SKILLS = {
   ],
   FRAMEWORKS: [
     { name: 'React', level: 5 },
+    { name: 'Next.js', level: 5 },
     { name: 'Meteor', level: 4.5 },
     { name: 'Material UI', level: 4 },
     { name: 'Express', level: 4 },
