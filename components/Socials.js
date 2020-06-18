@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { GithubIcon, LinkedinIcon } from './Icons';
-import classnames from '../utils/classnames';
 
 const useStyles = makeStyles((theme) => ({
   socials: {
