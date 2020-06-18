@@ -63,9 +63,9 @@ function Profile() {
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
   return (
     <Box className={classes.profile}>
-      <Box flexDirection="column">
+      <Box display="flex" flexDirection="column">
         <Avatar alt={PROFILE.ABOUT.Who} image="/avatar.jpeg" />
-        <Socials data={PROFILE.SOCIALS} />
+        <Socials links={PROFILE.SOCIALS} />
       </Box>
       <Divider
         flexItem
