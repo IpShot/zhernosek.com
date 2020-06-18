@@ -1,47 +1,59 @@
-import { SvgIcon } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { GithubIcon, LinkedinIcon } from './Icons';
+import classnames from '../utils/classnames';
 
 const useStyles = makeStyles((theme) => ({
   socials: {
-    paddingTop: theme.spacing(2),
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'space-between',
   },
-  github: {
-    width: 60,
+  link: {
+    marginTop: theme.spacing(2),
     outline: 'none',
-    '& svg': {
-      width: '100%',
-    }
-  },
-  linkedin: {
-    width: 100,
-    outline: 'none',
-    '& svg': {
-      width: '100%',
-    }
+    '&.github-link': {
+      height: 40.96,
+      '&:hover, &:focus': {
+        '& .github-icon': {
+          fill: theme.palette.text.primary,
+        },
+      },
+    },
+    '&.linkedin-link': {
+      height: 25.39,
+      '&:hover, &:focus': {
+        '& .linkedin-icon-letter': {
+          fill: theme.palette.text.primary,
+        },
+      },
+    },
   },
 }));
 
-function getIconSrc(name) {
-  return `/socials/${name}.svg`;
-}
-
-function Icon([ name, link ], idx) {
+function Link({ href, className, children }) {
   const classes = useStyles();
   return (
-    <a key={idx} href={link} rel="noopener" className={classes[name]}>
-      <SvgIcon alt={name} src={getIconSrc(name)} />
+    <a
+      href={href}
+      className={classnames(classes.link, className)}
+      rel="noopener"
+      target="_blank"
+    >
+      {children}
     </a>
   );
 }
 
-export default function Socials({ data }) {
+export default function Socials({ links }) {
   const classes = useStyles();
   return (
     <div className={classes.socials}>
-      {Object.entries(data).map(Icon)}
+      <Link href={links.linkedin} className="linkedin-link">
+        <LinkedinIcon />
+      </Link>
+      <Link href={links.github} className="github-link">
+        <GithubIcon />
+      </Link>
     </div>
   );
 }
