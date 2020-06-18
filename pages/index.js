@@ -17,6 +17,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
 import Avatar from '../components/Avatar';
+import Socials from '../components/Socials';
 import About from '../components/About';
 import ProjectCard from '../components/ProjectCard';
 import Feedback from '../components/Feedback';
@@ -63,14 +64,15 @@ function Profile() {
   return (
     <Box className={classes.profile}>
       <Box flexDirection="column">
-        <Avatar alt={PROFILE.Who} image="/avatar.jpeg" />
+        <Avatar alt={PROFILE.ABOUT.Who} image="/avatar.jpeg" />
+        <Socials data={PROFILE.SOCIALS} />
       </Box>
       <Divider
         flexItem
         orientation={isSmallDevice ? 'horizontal' : 'vertical'}
         className={classes.profileDivider}
       />
-      <About data={PROFILE} />
+      <About data={PROFILE.ABOUT} />
     </Box>
   );
 }
