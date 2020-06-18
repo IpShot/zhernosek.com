@@ -24,7 +24,7 @@ export default function Ava({ image, alt }) {
   const classes = useStyles();
 
   return (
-    <>
+    <div>
       {isLoading &&
         <Skeleton
           className={classes.avatar}
@@ -36,6 +36,6 @@ export default function Ava({ image, alt }) {
           src={src}
           className={classes.avatar}
           variant="rounded" />}
-    </>
+    </div>
   );
 }
