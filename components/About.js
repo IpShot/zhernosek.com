@@ -12,10 +12,14 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     paddingBottom: 4,
     alignItems: 'flex-start',
+    '&> a:hover, &> a:focus': {
+      color: theme.palette.text.gold,
+    },
   },
   aboutLineValue: {
     color: theme.palette.text.highlight,
     paddingLeft: theme.spacing(1),
+    outline: 'none',
   },
 }));
 
