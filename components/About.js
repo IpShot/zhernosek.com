@@ -19,8 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function getValue(key, data) {
-  const value = data[key];
+function getValue(value) {
   return Array.isArray(value) ? value[0] : value;
 }
 
@@ -35,8 +34,7 @@ function getTypographyComponent(key) {
   }
 }
 
-function getLinkParamsIfUrl(key, data) {
-  const value = data[key];
+function getLinkParamsIfArray(value) {
   if (Array.isArray(value) && value[1]) {
     return {
       href: value[1],
@@ -48,7 +46,7 @@ function getLinkParamsIfUrl(key, data) {
   }
 }
 
-function AboutLine(key, idx, data) {
+function AboutLine([ key, value ], idx) {
   const classes = useStyles();
   return (
     <ListItem disableGutters key={idx} className={classes.aboutLine}>
@@ -58,9 +56,9 @@ function AboutLine(key, idx, data) {
       <Typography
         className={classes.aboutLineValue}
         component={getTypographyComponent(key)}
-        {...getLinkParamsIfUrl(key, data)}
+        {...getLinkParamsIfArray(value)}
       >
-        {getValue(key, data)}
+        {getValue(value)}
       </Typography>
     </ListItem>
   );
@@ -70,7 +68,7 @@ export default function About({ data }) {
   const classes = useStyles();
   return (
     <List disablePadding className={classes.about}>
-      {Object.keys(data).map(AboutLine)}
+      {Object.entries(data).map(AboutLine)}
     </List>
   );
 }

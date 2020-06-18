@@ -70,7 +70,7 @@ function Profile() {
         orientation={isSmallDevice ? 'horizontal' : 'vertical'}
         className={classes.profileDivider}
       />
-      <About />
+      <About data={PROFILE} />
     </Box>
   );
 }
