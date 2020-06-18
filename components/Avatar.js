@@ -28,7 +28,6 @@ export default function Ava({ image, alt }) {
       {isLoading &&
         <Skeleton
           className={classes.avatar}
-          component="div"
           variant="rect"
           animation="wave" />}
       {!isLoading &&

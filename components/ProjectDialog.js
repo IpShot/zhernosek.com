@@ -95,7 +95,6 @@ function Screenshot({ project, image }) {
     <Grid item sm={6} xs={12} className={classes.screenshotContainer}>
       {isLoading &&
         <Skeleton
-          component="div"
           variant="rect"
           animation="wave"
           width="100%"
