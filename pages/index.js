@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   profileDivider: {
+    background: 'transparent',
     height: 'auto',
     margin: theme.spacing(0, 3),
     [theme.breakpoints.down('xs')]: {
