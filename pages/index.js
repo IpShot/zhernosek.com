@@ -34,24 +34,14 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(3),
     },
   },
-  skillsList: {
+  skills: {
     paddingTop: theme.spacing(1),
     paddingBottom: 0,
   },
-  skillsSectionName: {
-    padding: theme.spacing(1, 0),
-  },
-  skillsSectionText: {
-    margin: 0,
-  },
-  skillItem: {
-    padding: theme.spacing(0.5, 0),
-    paddingLeft: theme.spacing(2),
-  },
-  portfolioList: {
+  portfolio: {
     paddingTop: theme.spacing(2),
   },
-  feedbacksList: {
+  feedbacks: {
     paddingTop: theme.spacing(2),
     paddingBottom: 0,
   },
@@ -85,7 +75,7 @@ function Skills() {
         Skills
       </Typography>
       <Divider />
-      <List className={classes.skillsList}>
+      <List className={classes.skills}>
         {Object.entries(SKILLS).map(SkillsSection)}
       </List>
     </Box>
@@ -100,7 +90,7 @@ function Portfolio() {
         Portfolio
       </Typography>
       <Divider />
-      <Grid container spacing={2} className={classes.portfolioList}>
+      <Grid container spacing={2} className={classes.portfolio}>
         {PORTFOLIO.map(ProjectCard)}
       </Grid>
     </Box>
@@ -115,7 +105,7 @@ function Feedbacks() {
         Feedbacks
       </Typography>
       <Divider />
-      <List className={classes.feedbacksList}>
+      <List className={classes.feedbacks}>
         {FEEDBACKS.map(Feedback)}
       </List>
     </Box>
@@ -130,7 +120,7 @@ function OwnProjects() {
         Own Projects
       </Typography>
       <Divider />
-      <Grid container spacing={2} className={classes.portfolioList}>
+      <Grid container spacing={2} className={classes.portfolio}>
         {OWN_PROJECTS.map(ProjectCard)}
       </Grid>
     </Box>
