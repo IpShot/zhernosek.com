@@ -1,5 +1,6 @@
+import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { GithubIcon, LinkedinIcon } from './Icons';
+import { EmailIcon, GithubIcon, LinkedinIcon } from './Icons';
 
 const useStyles = makeStyles((theme) => ({
   socials: {
@@ -7,19 +8,32 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  github: {
+  email: {
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+    fontSize: '1.15em',
+    fontStyle: 'normal',
     marginTop: theme.spacing(2),
     outline: 'none',
-    height: 40.96,
     color: theme.palette.text.highlight,
     '&:hover, &:focus': {
       color: theme.palette.text.primary,
     },
   },
   linkedin: {
+    marginTop: theme.spacing(3),
+    outline: 'none',
+    height: 22.2,
+    color: theme.palette.text.highlight,
+    '&:hover, &:focus': {
+      color: theme.palette.text.primary,
+    },
+  },
+  github: {
     marginTop: theme.spacing(2),
     outline: 'none',
-    height: 25.39,
+    height: 35,
     color: theme.palette.text.highlight,
     '&:hover, &:focus': {
       color: theme.palette.text.primary,
@@ -45,6 +59,11 @@ export default function Socials({ links }) {
   const classes = useStyles();
   return (
     <div className={classes.socials}>
+      <address>
+        <Link social="email" href={links.email}>
+          <EmailIcon />&nbsp;roman@zhernosek.com
+        </Link>
+      </address>
       <Link social="linkedin" href={links.linkedin}>
         <LinkedinIcon />
       </Link>
