@@ -13,11 +13,11 @@ export const PROFILE = {
     Care: 'Family, Nature',
     Sports: 'Swimming, Volleyball, Boxing',
     Location: 'Saint\xa0Petersburg, Russia',
-    Email: 'roman@zhernosek.com',
   },
   SOCIALS: {
     github: 'https://github.com/IpShot',
     linkedin: 'https://www.linkedin.com/in/zhernosek-roman',
+    email: 'mailto:roman@zhernosek.com',
   },
 }
 
