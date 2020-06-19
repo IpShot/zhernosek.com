@@ -31,7 +31,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   profileDivider: {
+    height: 'auto',
     margin: theme.spacing(0, 3),
+    [theme.breakpoints.down('xs')]: {
+      height: 1,
+      margin: 0,
+      marginTop: theme.spacing(3),
+    },
   },
   skillsList: {
     paddingTop: theme.spacing(1),
