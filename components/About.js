@@ -1,5 +1,7 @@
+import { useState, useEffect } from 'react';
 import { List, ListItem, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import lifetime from '../utils/lifetime';
 
 const useStyles = makeStyles((theme) => ({
   about: {
@@ -23,15 +25,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function getValue(value) {
+function getValue(key, value) {
+  if (key === 'Lifetime') {
+    return lifetime(value);
+  }
   return Array.isArray(value) ? value[0] : value;
 }
 
 function getTypographyComponent(key) {
   switch (key) {
-    case 'Profession':
+    case 'Who':
       return 'h1';
     case 'Humor':
+    case 'University':
       return 'a';
     default:
       return 'span';
@@ -45,13 +51,23 @@ function getLinkParamsIfArray(value) {
       target: '_blank',
       rel: 'noopener',
     };
-  } else {
-    return {};
   }
+  return {};
 }
 
 function AboutLine([ key, value ], idx) {
   const classes = useStyles();
+  const [val, setVal] = useState(getValue(key, value));
+
+  useEffect(() => {
+    if (key === 'Lifetime') {
+      const id = setInterval(() => {
+        setVal(lifetime(value));
+      }, 1000);
+      return () => clearInterval(id);
+    }
+  });
+
   return (
     <ListItem disableGutters key={idx} className={classes.aboutLine}>
       <Typography component="span" className={classes.aboutLineKey}>
@@ -62,7 +78,7 @@ function AboutLine([ key, value ], idx) {
         component={getTypographyComponent(key)}
         {...getLinkParamsIfArray(value)}
       >
-        {getValue(value)}
+        {val}
       </Typography>
     </ListItem>
   );

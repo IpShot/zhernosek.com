@@ -1,9 +1,11 @@
 export const PROFILE = {
   ABOUT: {
     Who: 'Roman Zhernosek',
-    Age: 27,
+    Lifetime: '09 Apr 1993 16:00:00 GMT+5',
     Profession: 'Full\xa0Stack Web\xa0Developer',
     Experience: '5+ years',
+    Education: 'BCS, BEc',
+    University: ['Polytech', 'https://english.spbstu.ru'],
     Perfectionist: '99%',
     Minimalist: '95%',
     Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
@@ -11,6 +13,7 @@ export const PROFILE = {
     Care: 'Family, Nature',
     Sports: 'Swimming, Volleyball, Boxing',
     Location: 'Saint\xa0Petersburg, Russia',
+    Email: 'roman@zhernosek.com',
   },
   SOCIALS: {
     github: 'https://github.com/IpShot',
