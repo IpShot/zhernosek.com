@@ -1,4 +1,4 @@
-import { Avatar } from '@material-ui/core';
+import { Box, Avatar } from '@material-ui/core';
 import { Skeleton } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
 import { useImage } from 'react-image';
@@ -24,7 +24,7 @@ export default function Ava({ image, alt }) {
   const classes = useStyles();
 
   return (
-    <div>
+    <Box display="flex" justifyContent="center">
       {isLoading &&
         <Skeleton
           className={classes.avatar}
@@ -36,6 +36,6 @@ export default function Ava({ image, alt }) {
           src={src}
           className={classes.avatar}
           variant="rounded" />}
-    </div>
+    </Box>
   );
 }
