@@ -10,7 +10,6 @@ export const PROFILE = {
     Minimalist: '95%',
     Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
     Lifestye: 'Healthy',
-    Care: 'Family, Nature',
     Sports: 'Swimming, Volleyball, Boxing',
     Location: 'Saint\xa0Petersburg, Russia',
   },
