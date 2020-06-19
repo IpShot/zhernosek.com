@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     fontSize: '1.15em',
     fontStyle: 'normal',
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1),
     outline: 'none',
     color: theme.palette.text.highlight,
     '&:hover, &:focus': {
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   linkedin: {
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(2.5),
     outline: 'none',
     height: 22.2,
     color: theme.palette.text.highlight,
