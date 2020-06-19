@@ -45,6 +45,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: 0,
   },
+  copyright: {
+    paddingTop: theme.spacing(6),
+    textAlign: 'center',
+  },
 }));
 
 function Profile() {
@@ -52,7 +56,7 @@ function Profile() {
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
   return (
-    <Box className={classes.profile}>
+    <header className={classes.profile}>
       <Box display="flex" flexDirection="column">
         <Avatar alt={PROFILE.ABOUT.Who} image="/avatar.jpeg" />
         <Socials links={PROFILE.SOCIALS} />
@@ -63,7 +67,7 @@ function Profile() {
         className={classes.profileDivider}
       />
       <About data={PROFILE.ABOUT} />
-    </Box>
+    </header>
   );
 }
 
@@ -130,9 +134,11 @@ function OwnProjects() {
 function Copyright() {
   const classes = useStyles();
   return (
-    <Box pt={6}>
-      {PROFILE.ABOUT.Who} © {new Date().getUTCFullYear()}
-    </Box>
+    <footer className={classes.copyright}>
+      <small>
+        {PROFILE.ABOUT.Who} &copy; {new Date().getUTCFullYear()}
+      </small>
+    </footer>
   );
 }
 

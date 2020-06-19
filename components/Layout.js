@@ -5,7 +5,7 @@ import { PROFILE } from '../data';
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    padding: theme.spacing(6, 3),
+    padding: theme.spacing(6, 3, 3, 3),
   },
 }));
 
