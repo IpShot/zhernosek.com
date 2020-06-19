@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
 import fonts from '../fonts';
 import 'react-medium-image-zoom/dist/styles.css';
+import '../integrations';
 
 export default function App({ Component, pageProps }) {
   React.useEffect(() => {
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
       <meta charSet="utf-8" />
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
     </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
