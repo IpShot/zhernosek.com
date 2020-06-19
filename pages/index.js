@@ -4,21 +4,16 @@ import {
   Typography,
   Link,
   List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Collapse,
   Divider,
   useMediaQuery,
 } from '@material-ui/core';
-import { ExpandMore, ExpandLess } from '@material-ui/icons';
-import { Rating } from '@material-ui/lab';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
 import Avatar from '../components/Avatar';
 import Socials from '../components/Socials';
 import About from '../components/About';
+import SkillsSection from '../components/SkillsSection';
 import ProjectCard from '../components/ProjectCard';
 import Feedback from '../components/Feedback';
 
@@ -82,53 +77,6 @@ function Profile() {
   );
 }
 
-function Skill({ name, level }, idx) {
-  const classes = useStyles();
-  return (
-    <ListItem key={idx} alignItems="center" className={classes.skillItem}>
-      <ListItemText disableTypography>
-        <Typography component="span" variant="h3">
-          {name}
-        </Typography>
-      </ListItemText>
-      <ListItemIcon>
-        <Rating value={level} precision={0.5} readOnly />
-      </ListItemIcon>
-    </ListItem>
-  );
-}
-
-function SkillsSection([ section, skills ], idx) {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleClick = () => {
-    setOpen(!open);
-  }
-
-  return (
-    <List key={idx} disablePadding>
-      <ListItem
-        button
-        onClick={handleClick}
-        className={classes.skillsSectionName}
-      >
-        <ListItemText disableTypography className={classes.skillsSectionText}>
-          <Typography component="h3" variant="h3">
-            {section}
-          </Typography>
-        </ListItemText>
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List>
-          {skills.map(Skill)}
-        </List>
-      </Collapse>
-    </List>
-  );
-}
-
 function Skills() {
   const classes = useStyles();
   return (
@@ -189,6 +137,14 @@ function OwnProjects() {
   );
 }
 
+function Copyright() {
+  const classes = useStyles();
+  return (
+    <Box pt={6}>
+    </Box>
+  );
+}
+
 export default function HomePage() {
   return (
     <Layout>
@@ -197,6 +153,7 @@ export default function HomePage() {
       <Portfolio />
       <Feedbacks />
       <OwnProjects />
+      <Copyright />
     </Layout>
   );
 }

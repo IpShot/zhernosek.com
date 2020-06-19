@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState, useCallback } from 'react';
 import {
   Grid,
   Card,
@@ -27,13 +27,13 @@ function getLogoUrl(project = 'default', logo = 'logo.png') {
 export default function ProjectCard(project, idx) {
   const { name, desc, logo, url } = project;
   const classes = useStyles({ name });
-  const [isDialogOpen, setDialogVisibility] = React.useState(false);
+  const [isDialogOpen, setDialogVisibility] = useState(false);
 
-  const handleClickCard = React.useCallback(() => {
+  const handleClickCard = useCallback(() => {
     setDialogVisibility(true);
   }, []);
 
-  const handleCloseDialog = React.useCallback(() => {
+  const handleCloseDialog = useCallback(() => {
     setDialogVisibility(false);
   }, []);
 
