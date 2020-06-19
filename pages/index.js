@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   profileDivider: {
-    background: 'transparent',
     margin: theme.spacing(0, 3),
   },
   skillsList: {
