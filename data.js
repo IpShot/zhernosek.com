@@ -85,9 +85,6 @@ export const SKILLS = {
     { name: 'G Suit', level: 3.5 },
     { name: 'Google Maps', level: 3 },
   ],
-  // OTHER: [
-  //   { name: 'Android SDK', level: 3 },
-  // ]
 }
 
 export const PORTFOLIO = [{

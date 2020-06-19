@@ -131,6 +131,7 @@ function Copyright() {
   const classes = useStyles();
   return (
     <Box pt={6}>
+      {PROFILE.ABOUT.Who} © {new Date().getUTCFullYear()}
     </Box>
   );
 }
