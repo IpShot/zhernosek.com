@@ -102,6 +102,41 @@ export const PORTFOLIO = [{
     'Mixpanel', 'FullStory', 'Facebook Pixel', 'Google Analytics'
   ],
 },{
+  name: 'Briefly',
+  desc: 'Connect brands and photographers',
+  details: 'Client wanted to create a platform for connect brands and photographs. \
+  Brand should be able to post info about required photos content, select creator, \
+  discuss project with creator, review photos, complete project and pay. \
+  Creator should be able to view project info, submit proposal, discuss project with brand, upload photos.',
+  images: [
+    'landing', 'login', 'new project modal', 'brand start create project',
+    'creator briefs', 'creator submit proposal', 'brand select proposal',
+    'chat', 'image comments', 'brand assets', 'creator assets', 'payments',
+    'receipt', 'admin brands list', 'admin brand info', 'admin creators list',
+    'admin creator reviews', 'admin projects list', 'admin project financials'
+  ],
+  stack: [
+    'React', 'Express', 'MongoDB', 'FullStory', 'OneSignal',
+    'Intercom', 'Mailgun', 'Amazon S3'
+  ],
+},{
+  name: 'Teem',
+  desc: 'The US schools platform',
+  details: 'Client wanted to develop a web app that allows school staffs \
+  to find each other and communicate easily, to search any useful files/links \
+  which help them at work. Also it should has an admin side for managing schools \
+  and districts (group of schools in America). The managing includes managing users (staffs) and topics.\
+  I built almost all in the app using Meteor + React. \
+  Also I used Meteor\'s Cordova integration to wrap an app for mobile iOS and Android.',
+  images: [
+    'landing', 'sign in', 'school staffs list', 'create new topic', 'topic channel',
+    'notifications', 'global search', 'schools list (admin)', 'school topics (admin)'
+  ],
+  stack: [
+    'React', 'Meteor', 'MongoDB', 'Cordova', 'Electron','G Suit',
+    'Mixpanel', 'OneSignal', 'Mailchimp', 'Amazon S3', 'Heroku'
+  ],
+},{
   name: 'LightYear',
   desc: 'Courses and leadership trainings',
   details: '',
@@ -125,41 +160,6 @@ export const PORTFOLIO = [{
     'shopping history', 'account', 'public profile'
   ],
   stack: ['React', 'Express', 'MongoDB'],
-},{
-  name: 'Teem',
-  desc: 'The US schools platform',
-  details: 'Client wanted to develop a web app that allows school staffs \
-  to find each other and communicate easily, to search any useful files/links \
-  which help them at work. Also it should has an admin side for managing schools \
-  and districts (group of schools in America). The managing includes managing users (staffs) and topics.\
-  I built almost all in the app using Meteor + React. \
-  Also I used Meteor\'s Cordova integration to wrap an app for mobile iOS and Android.',
-  images: [
-    'landing', 'sign in', 'school staffs list', 'create new topic', 'topic channel',
-    'notifications', 'global search', 'schools list (admin)', 'school topics (admin)'
-  ],
-  stack: [
-    'React', 'Meteor', 'MongoDB', 'Cordova', 'Electron','G Suit',
-    'Mixpanel', 'OneSignal', 'Mailchimp', 'Amazon S3', 'Heroku'
-  ],
-},{
-  name: 'Briefly',
-  desc: 'Connect brands and photographers',
-  details: 'Client wanted to create a platform for connect brands and photographs. \
-  Brand should be able to post info about required photos content, select creator, \
-  discuss project with creator, review photos, complete project and pay. \
-  Creator should be able to view project info, submit proposal, discuss project with brand, upload photos.',
-  images: [
-    'landing', 'login', 'new project modal', 'brand start create project',
-    'creator briefs', 'creator submit proposal', 'brand select proposal',
-    'chat', 'image comments', 'brand assets', 'creator assets', 'payments',
-    'receipt', 'admin brands list', 'admin brand info', 'admin creators list',
-    'admin creator reviews', 'admin projects list', 'admin project financials'
-  ],
-  stack: [
-    'React', 'Express', 'MongoDB', 'FullStory', 'OneSignal',
-    'Intercom', 'Mailgun', 'Amazon S3'
-  ],
 }]
 
 export const FEEDBACKS = [{
@@ -205,28 +205,23 @@ export const FEEDBACKS = [{
 }]
 
 export const OWN_PROJECTS = [{
-  name: 'StudyTime',
-  desc: 'Timetable for students',
-  details: 'Client needed to develop a cross-platform application with responsive web. \
-  Also, he needed a little simple landing. The project aimed to provide to students \
-  with a usable and beautiful timetable, which will be available from any devices.\
-  It was built using following technology stack:\
-  - Landing: React.js, Stylus, Basscss\
-  - App backend: Meteor, MongoDB\
-  - App frontend: AngularJS, OnsenUI, Stylus, MarsDB\
-  The web app was wrapped as mobile apps (Android, iOS) by Cordova and as desktop apps (MacOS, Linux, Windows) by Electron.',
-  images: [ 'desktop', 'timetable' ],
-  stack: [ 'Angular', 'Onsen UI', 'Meteor', 'MongoDB', 'Cordova', 'Electron' ],
-}, {
+  name: 'Words Explorer',
+  desc: 'Deep English words learning',
+  url: 'https://words.tbbe.ru',
+  stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
+},{
   name: 'TBBE',
   desc: 'Learn English watching TV shows',
   stack: [
     'React', 'Eve', 'MongoDB', 'Crisp', 'Mailchimp', 'Yandex.Checkout',
     'Yandex.Metrica', 'Google Analytics', 'FullStory'
   ],
-}, {
-  name: 'Words Explorer',
-  desc: 'Deep English words learning',
-  url: 'https://words.tbbe.ru',
-  stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
+},{
+  name: 'StudyTime',
+  desc: 'Timetable for students',
+  details: 'The project aimed to provide students \
+  with a usable and beautiful timetable, available from any device.\
+  There are a responsive web, mobile and desktop apps.',
+  images: [ 'desktop', 'timetable' ],
+  stack: [ 'Angular', 'Onsen UI', 'Meteor', 'MongoDB', 'Cordova', 'Electron' ],
 }]
