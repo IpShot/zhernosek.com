@@ -94,9 +94,9 @@ function getScreenshotUrl(project, image, ext = 'jpg') {
   return `/${project.toLowerCase()}/${name}`;
 }
 
-function Screenshot({ project, image }) {
+function Screenshot({ project, image, ext }) {
   const { src, isLoading } = useImage({
-    srcList: getScreenshotUrl(project, image),
+    srcList: getScreenshotUrl(project, image, ext),
     useSuspense: false,
   });
   const classes = useStyles();
@@ -143,7 +143,7 @@ function Stack({ array }) {
 }
 
 export default function ProjectDialog({ project, open, onClose }) {
-  const { name, desc, stack, details, url, images, imageExt } = project;
+  const { name, desc, stack, details, url, images, imagesExt } = project;
   const classes = useStyles();
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
@@ -183,7 +183,7 @@ export default function ProjectDialog({ project, open, onClose }) {
         </DialogContentText>
         <Grid container className={classes.screenshotsBox}>
           {images && images.map((img, idx) =>
-            <Screenshot key={idx} project={name} image={img} ext={imageExt} />
+            <Screenshot key={idx} project={name} image={img} ext={imagesExt} />
           )}
         </Grid>
       </DialogContent>
