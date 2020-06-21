@@ -94,7 +94,7 @@ function getScreenshotUrl(project, image, ext = 'jpg') {
   return `/${project.toLowerCase()}/${name}`;
 }
 
-function Screenshot({ project, image, ext, height = '200px' }) {
+function Screenshot({ project, image, ext, height = 200 }) {
   const { src, isLoading } = useImage({
     srcList: getScreenshotUrl(project, image, ext),
     useSuspense: false,
@@ -151,7 +151,7 @@ export default function ProjectDialog({ project, open, onClose }) {
     url,
     images,
     imagesExt,
-    imagesHeight,
+    loaderHeight,
   } = project;
   const classes = useStyles();
   const theme = useTheme();
@@ -197,7 +197,7 @@ export default function ProjectDialog({ project, open, onClose }) {
               project={name}
               image={img}
               ext={imagesExt}
-              height={imagesHeight} />
+              height={loaderHeight} />
           )}
         </Grid>
       </DialogContent>
