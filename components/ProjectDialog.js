@@ -63,14 +63,24 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(4),
   },
+  screenshotsBox: {
+    width: `calc(100% + ${theme.spacing(0.5)}px)`,
+    margin: theme.spacing(0, -0.5),
+    paddingBottom: theme.spacing(1.5),
+  },
   screenshotContainer: {
-    paddingTop: theme.spacing(3),
+    maxHeight: 200,
+    overflow: 'hidden',
+    margin: theme.spacing(0.5),
     '& [aria-label="Zoom image"]': {
       outline: 'none',
       transitionDuration: '0.25s',
       '&:focus,&:hover': {
         backgroundColor: theme.palette.image.hover,
       },
+    },
+    [theme.breakpoints.up('sm')]: {
+      maxWidth: `calc(50% - ${theme.spacing(1)}px)`,
     },
   },
   screenshot: {
@@ -79,8 +89,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function getScreenshotUrl(project, image) {
-  return `/${project.toLowerCase()}/${image}.png`;
+function getScreenshotUrl(project, image, ext = 'jpg') {
+  const name = image.split('.').length > 1 ? image : `${image}.${ext}`;
+  return `/${project.toLowerCase()}/${name}`;
 }
 
 function Screenshot({ project, image }) {
@@ -89,7 +100,6 @@ function Screenshot({ project, image }) {
     useSuspense: false,
   });
   const classes = useStyles();
-  const theme = useTheme();
 
   return (
     <Grid item sm={6} xs={12} className={classes.screenshotContainer}>
@@ -98,11 +108,9 @@ function Screenshot({ project, image }) {
           variant="rect"
           animation="wave"
           width="100%"
-          height="195px" />}
+          height="200px" />}
       {!isLoading &&
-        <Zoom
-          overlayBgColorEnd="rgba(0, 0, 0, 0.7)"
-          wrapStyle={{ border: theme.imageBorder }}>
+        <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
           <img
             src={src}
             className={classes.screenshot}
@@ -135,7 +143,7 @@ function Stack({ array }) {
 }
 
 export default function ProjectDialog({ project, open, onClose }) {
-  const { name, desc, stack, details, url, images } = project;
+  const { name, desc, stack, details, url, images, imageExt } = project;
   const classes = useStyles();
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
@@ -173,9 +181,9 @@ export default function ProjectDialog({ project, open, onClose }) {
         <DialogContentText id="dialog-description" className={classes.description}>
           {details}
         </DialogContentText>
-        <Grid container spacing={1}>
+        <Grid container className={classes.screenshotsBox}>
           {images && images.map((img, idx) =>
-            <Screenshot key={idx} project={name} image={img} />
+            <Screenshot key={idx} project={name} image={img} ext={imageExt} />
           )}
         </Grid>
       </DialogContent>
