@@ -66,7 +66,7 @@ function AboutLine([ key, value ], idx) {
       }, 1000);
       return () => clearInterval(id);
     }
-  });
+  }, [key, value]);
 
   return (
     <ListItem disableGutters key={idx} className={classes.aboutLine}>
