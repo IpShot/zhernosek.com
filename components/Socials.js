@@ -60,8 +60,8 @@ export default function Socials({ links }) {
   return (
     <div className={classes.socials}>
       <address>
-        <Link social="email" href={links.email}>
-          <EmailIcon />&nbsp;roman@zhernosek.com
+        <Link social="email" href={`mailto:${links.email}`}>
+          <EmailIcon />&nbsp;{links.email}
         </Link>
       </address>
       <Link social="linkedin" href={links.linkedin}>
