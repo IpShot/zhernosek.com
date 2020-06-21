@@ -94,7 +94,7 @@ function getScreenshotUrl(project, image, ext = 'jpg') {
   return `/${project.toLowerCase()}/${name}`;
 }
 
-function Screenshot({ project, image, ext }) {
+function Screenshot({ project, image, ext, height = '200px' }) {
   const { src, isLoading } = useImage({
     srcList: getScreenshotUrl(project, image, ext),
     useSuspense: false,
@@ -108,7 +108,7 @@ function Screenshot({ project, image, ext }) {
           variant="rect"
           animation="wave"
           width="100%"
-          height="200px" />}
+          height={height} />}
       {!isLoading &&
         <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
           <img
@@ -143,7 +143,16 @@ function Stack({ array }) {
 }
 
 export default function ProjectDialog({ project, open, onClose }) {
-  const { name, desc, stack, details, url, images, imagesExt } = project;
+  const {
+    name,
+    desc,
+    stack,
+    details,
+    url,
+    images,
+    imagesExt,
+    imagesHeight,
+  } = project;
   const classes = useStyles();
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('xs'));
@@ -183,7 +192,12 @@ export default function ProjectDialog({ project, open, onClose }) {
         </DialogContentText>
         <Grid container className={classes.screenshotsBox}>
           {images && images.map((img, idx) =>
-            <Screenshot key={idx} project={name} image={img} ext={imagesExt} />
+            <Screenshot
+              key={idx}
+              project={name}
+              image={img}
+              ext={imagesExt}
+              height={imagesHeight} />
           )}
         </Grid>
       </DialogContent>
