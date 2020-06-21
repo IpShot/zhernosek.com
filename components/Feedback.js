@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getAvatarUrl(project = 'default') {
-  return `/${project.toLowerCase()}/owner.jpeg`;
+  return `/${project.toLowerCase()}/owner.jpg`;
 }
 
 export default function Feedback(data, idx) {
