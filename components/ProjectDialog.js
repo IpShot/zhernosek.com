@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(4),
   },
   screenshotsBox: {
-    width: `calc(100% + ${theme.spacing(0.5)}px)`,
+    width: `calc(100% + ${theme.spacing(1)}px)`,
     margin: theme.spacing(0, -0.5),
     paddingBottom: theme.spacing(1.5),
   },
