@@ -68,8 +68,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0, -0.5),
     paddingBottom: theme.spacing(1.5),
   },
-  screenshotContainer: {
-    maxHeight: 200,
+  screenshotContainer: ({ maxHeight = 200 }) => ({
+    maxHeight,
     overflow: 'hidden',
     margin: theme.spacing(0.5),
     '& [aria-label="Zoom image"]': {
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       maxWidth: `calc(50% - ${theme.spacing(1)}px)`,
     },
-  },
+  }),
   screenshot: {
     width: '100%',
     height: '100%',
@@ -94,12 +94,12 @@ function getScreenshotUrl(project, image, ext = 'jpg') {
   return `/${project.toLowerCase()}/${name}`;
 }
 
-function Screenshot({ project, image, ext, height = 200 }) {
+function Screenshot({ project, image, ext, maxHeight = 200 }) {
   const { src, isLoading } = useImage({
     srcList: getScreenshotUrl(project, image, ext),
     useSuspense: false,
   });
-  const classes = useStyles();
+  const classes = useStyles({ maxHeight });
 
   return (
     <Grid item sm={6} xs={12} className={classes.screenshotContainer}>
@@ -108,7 +108,7 @@ function Screenshot({ project, image, ext, height = 200 }) {
           variant="rect"
           animation="wave"
           width="100%"
-          height={height} />}
+          height={maxHeight} />}
       {!isLoading &&
         <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.7)">
           <img
@@ -151,7 +151,7 @@ export default function ProjectDialog({ project, open, onClose }) {
     url,
     images,
     imagesExt,
-    loaderHeight,
+    imageMaxHeight,
   } = project;
   const classes = useStyles();
   const theme = useTheme();
@@ -197,7 +197,7 @@ export default function ProjectDialog({ project, open, onClose }) {
               project={name}
               image={img}
               ext={imagesExt}
-              height={loaderHeight} />
+              maxHeight={imageMaxHeight} />
           )}
         </Grid>
       </DialogContent>
