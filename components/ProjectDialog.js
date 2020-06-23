@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function getScreenshotUrl(project, image, ext = 'jpg') {
+function getScreenshotUrl(project, image, ext = 'png') {
   const name = image.split('.').length > 1 ? image : `${image}.${ext}`;
   return `/${project.toLowerCase()}/${name}`;
 }
