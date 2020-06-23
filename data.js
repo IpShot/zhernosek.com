@@ -16,7 +16,7 @@ export const PROFILE = {
   SOCIALS: {
     github: 'https://github.com/IpShot',
     linkedin: 'https://www.linkedin.com/in/zhernosek-roman',
-    email: 'mailto:roman@zhernosek.com',
+    email: 'dev@zhernosek.com',
   },
 }
 
@@ -93,10 +93,27 @@ export const PORTFOLIO = [{
   details: 'Client wanted to develop web desktop client and mobile apps for \
   search jobs by criterias and apply to them. Service was developed for Germany.',
   url: 'https://jobninja.com',
-  images: ['landing', 'job search', 'job page', 'profile'],
+  images: ['landing.jpg', 'job search', 'job page.jpg', 'profile'],
   stack: [
     'React', 'React Native', 'Flask', 'MongoDB', 'Heroku',
     'Mixpanel', 'FullStory', 'Facebook Pixel', 'Google Analytics'
+  ],
+},{
+  name: 'LightYear',
+  desc: 'Courses and leadership trainings',
+  details: '',
+  url: 'https://lightyear.co',
+  logo: 'logo.svg',
+  imageMaxHeight: '170px',
+  images: [
+    'dashboard', 'chat', 'courses', 'purchase.jpg',
+    'course enrolled', 'group video chat.jpg',
+    'live video conference', 'search',
+    'course edit (admin)', 'users list (admin)'
+  ],
+  stack: [
+    'Meteor', 'MongoDB', 'Galaxy', 'Stripe', 'SendGrid',
+    'Intercom', 'Cloudinary', 'Amazon S3'
   ],
 },{
   name: 'Briefly',
@@ -106,10 +123,11 @@ export const PORTFOLIO = [{
   discuss project with creator, review photos, complete project and pay. \
   Creator should be able to view project info, submit proposal, discuss project with brand, upload photos.',
   images: [
-    'landing', 'login', 'new project modal', 'brand start create project',
-    'creator briefs', 'creator submit proposal', 'brand select proposal',
-    'chat', 'image comments', 'brand assets', 'creator assets', 'payments',
-    'receipt', 'admin brands list', 'admin brand info', 'admin creators list',
+    'landing.jpg', 'login', 'new project modal', 'brand start create project',
+    'creator projects', 'creator project info', 'creator submit proposal',
+    'brand chooses creator', 'chat.jpg', 'image comments.jpg',
+    'brand assets', 'creator assets', 'payments', 'receipt', 
+    'admin brands list', 'admin brand info', 'admin creators list',
     'admin creator reviews', 'admin projects list', 'admin project financials'
   ],
   stack: [
@@ -126,22 +144,13 @@ export const PORTFOLIO = [{
   I built almost all in the app using Meteor + React. \
   Also I used Meteor\'s Cordova integration to wrap an app for mobile iOS and Android.',
   images: [
-    'landing', 'sign in', 'school staffs list', 'create new topic', 'topic channel',
-    'notifications', 'global search', 'schools list (admin)', 'school topics (admin)'
+    'landing', 'sign in', 'school staffs list', 'create new topic',
+    'topic channel', 'notifications', 'global search', 'profile',
+    'schools list (admin)', 'school topics (admin)'
   ],
   stack: [
     'React', 'Meteor', 'MongoDB', 'Cordova', 'Electron','G Suit',
     'Mixpanel', 'OneSignal', 'Mailchimp', 'Amazon S3', 'Heroku'
-  ],
-},{
-  name: 'LightYear',
-  desc: 'Courses and leadership trainings',
-  details: '',
-  url: 'https://lightyear.co',
-  logo: 'logo.svg',
-  stack: [
-    'Meteor', 'MongoDB', 'Galaxy', 'Stripe', 'SendGrid',
-    'Intercom', 'Cloudinary', 'Amazon S3'
   ],
 },{
   name: 'MiID',
@@ -153,7 +162,7 @@ export const PORTFOLIO = [{
   with flux architecture to get data from API. \
   For building front-end project I had used Webpack.',
   images: [
-    'landing', 'brand page', 'customization', 'cart', 'order info',
+    'landing.jpg', 'brand page', 'customization', 'cart', 'order info',
     'shopping history', 'account', 'public profile'
   ],
   stack: ['React', 'Express', 'MongoDB'],
@@ -196,7 +205,6 @@ export const FEEDBACKS = [{
 },{
   project: 'LightYear',
   owner: 'Igsaan Salie, PM',
-  logo: 'logo.svg',
   feedback: 'Roman is a great programmer. He is always aiming for excellence and that\'s not easy to find out there. \
   We will keep working for long.',
 }]
@@ -205,10 +213,21 @@ export const OWN_PROJECTS = [{
   name: 'Words Explorer',
   desc: 'Deep English words learning',
   url: 'https://words.tbbe.ru',
+  logo: 'logo.svg',
+  imageMaxHeight: '142px',
+  images: ['search', 'video.jpg', 'reminder.jpg', 'common words'],
   stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
 },{
   name: 'TBBE',
   desc: 'Learn English watching TV shows',
+  logo: 'logo.svg',
+  imageMaxHeight: '176px',
+  imagesExt: 'jpg',
+  images: [
+    'dashboard', 'login.png',
+    'search serial', 'guide',
+    'exercise', 'virtual money'
+  ],
   stack: [
     'React', 'Eve', 'MongoDB', 'Crisp', 'Mailchimp', 'Yandex.Checkout',
     'Yandex.Metrica', 'Google Analytics', 'FullStory'
@@ -216,9 +235,11 @@ export const OWN_PROJECTS = [{
 },{
   name: 'StudyTime',
   desc: 'Timetable for students',
+  logo: 'logo.svg',
   details: 'The project aimed to provide students \
   with a usable and beautiful timetable, available from any device.\
   There are a responsive web, mobile and desktop apps.',
-  images: [ 'desktop', 'timetable' ],
+  imageMaxHeight: '160px',
+  images: [ 'landing', 'timetable' ],
   stack: [ 'Angular', 'Onsen UI', 'Meteor', 'MongoDB', 'Cordova', 'Electron' ],
 }]
