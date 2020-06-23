@@ -32,16 +32,10 @@ function getValue(key, value) {
   return Array.isArray(value) ? value[0] : value;
 }
 
-function getTypographyComponent(key) {
-  switch (key) {
-    case 'Who':
-      return 'h1';
-    case 'Humor':
-    case 'University':
-      return 'a';
-    default:
-      return 'span';
-  }
+function getTypographyComponent(key, value) {
+  if (key === 'Who') return 'h1';
+  if (Array.isArray(value)) return 'a';
+  return 'span';
 }
 
 function getLinkParamsIfArray(value) {
@@ -57,12 +51,12 @@ function getLinkParamsIfArray(value) {
 
 function AboutLine([ key, value ], idx) {
   const classes = useStyles();
-  const [val, setVal] = useState(getValue(key, value));
+  const [renderValue, setRenderValue] = useState(getValue(key, value));
 
   useEffect(() => {
     if (key === 'Lifetime') {
       const id = setInterval(() => {
-        setVal(lifetime(value));
+        setRenderValue(lifetime(value));
       }, 1000);
       return () => clearInterval(id);
     }
@@ -75,10 +69,10 @@ function AboutLine([ key, value ], idx) {
       </Typography>
       <Typography
         className={classes.aboutLineValue}
-        component={getTypographyComponent(key)}
+        component={getTypographyComponent(key, value)}
         {...getLinkParamsIfArray(value)}
       >
-        {val}
+        {renderValue}
       </Typography>
     </ListItem>
   );
