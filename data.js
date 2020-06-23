@@ -4,6 +4,7 @@ export const PROFILE = {
     Lifetime: '09 Apr 1993 16:00:00 GMT+5',
     Profession: 'Full\xa0Stack Web\xa0Developer',
     Experience: '5+ years',
+    Member: ['Gigster Talent Network', 'https://gigster.com/talent'],
     Education: 'BCS, BEc',
     University: ['Polytech', 'https://english.spbstu.ru'],
     Perfectionist: '99%',
@@ -47,6 +48,7 @@ export const SKILLS = {
   ],
   DATABASE: [
     { name: 'MongoDB', level: 5 },
+    { name: 'PostgreSQL', level: 3 },
     { name: 'ElasticSearch', level: 2 },
   ],
   CLOUD: [
@@ -126,7 +128,7 @@ export const PORTFOLIO = [{
     'landing.jpg', 'login', 'new project modal', 'brand start create project',
     'creator projects', 'creator project info', 'creator submit proposal',
     'brand chooses creator', 'chat.jpg', 'image comments.jpg',
-    'brand assets', 'creator assets', 'payments', 'receipt', 
+    'brand assets', 'creator assets', 'payments', 'receipt',
     'admin brands list', 'admin brand info', 'admin creators list',
     'admin creator reviews', 'admin projects list', 'admin project financials'
   ],
