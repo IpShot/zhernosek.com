@@ -5,8 +5,7 @@ export const PROFILE = {
     Profession: 'Full\xa0Stack Web\xa0Developer',
     Experience: '5+ years',
     Member: ['Gigster Talent Network', 'https://gigster.com/talent'],
-    Education: 'BCS, BEc',
-    University: ['Polytech', 'https://english.spbstu.ru'],
+    Education: ['Computer Science, Polytech', 'https://english.spbstu.ru'],
     Perfectionist: '99%',
     Minimalist: '95%',
     Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
@@ -17,7 +16,7 @@ export const PROFILE = {
   SOCIALS: {
     github: 'https://github.com/IpShot',
     linkedin: 'https://www.linkedin.com/in/zhernosek-roman',
-    email: 'dev@zhernosek.com',
+    email: 'roman@zhernosek.com',
   },
 }
 
@@ -220,6 +219,10 @@ export const FEEDBACKS = [{
 export const OWN_PROJECTS = [{
   name: 'Words Explorer',
   desc: 'Deep English words learning',
+  details: 'The service allows people to explore new words deeply. \
+  Instead of just a translation people are getting a bunch of \
+  information about the word meanings, synonyms, most common use \
+  cases (collocations) and examples with context, including short video.',
   url: 'https://words.tbbe.ru',
   logo: 'logo.svg',
   imageMaxHeight: '142px',
@@ -228,6 +231,11 @@ export const OWN_PROJECTS = [{
 },{
   name: 'TBBE',
   desc: 'Learn English watching TV shows',
+  details: 'The platform allows people to learn English while \
+  watching TV shows. They can stop and repeat last phrase they \
+  didn\'t understand in slower pace, check subtitles and explanation \
+  on every word in the phrase, add words to a dictionary for future \
+  learning. Also there are some exercises available for memorize phrases.',
   logo: 'logo.svg',
   imageMaxHeight: '176px',
   imagesExt: 'jpg',
@@ -244,8 +252,8 @@ export const OWN_PROJECTS = [{
   name: 'StudyTime',
   desc: 'Timetable for students',
   logo: 'logo.svg',
-  details: 'The project aimed to provide students \
-  with a usable and beautiful timetable, available from any device.\
+  details: 'The project\'s target is to provide students with \
+  a usable and beautiful timetable, available from any device.\
   There are a responsive web, mobile and desktop apps.',
   imageMaxHeight: '160px',
   images: [ 'landing', 'timetable' ],
