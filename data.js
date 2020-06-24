@@ -128,10 +128,10 @@ export const PORTFOLIO = [{
   desc: 'Connect brands and photographers',
   details: 'Client wanted to create a web platform which connects \
   brands and photographers. Brands are able to post an information \
-  about what photos content do they need, choose appropriate creator, \
-  discuss the project, review photos, select appropriate ones and pay \
-  for them. Photographers are able to view available projects, \
-  submit proposals for interested ones, discuss a project with brand, \
+  about what photos content do they need, choose an appropriate creator, \
+  discuss the project, review photos, select appropriate ones and \
+  pay for them. Photographers are able to view available projects, \
+  submit proposals to interested ones, discuss a project with brand, \
   upload photos and get payouts for them. Brands, photographers, \
   ptojects, payments and payouts can be managed by an admin.',
   images: [
