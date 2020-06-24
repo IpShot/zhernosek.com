@@ -95,6 +95,7 @@ export const PORTFOLIO = [{
   mobile apps for searching jobs according to set criterias and \
   applying to them. The service has been developed for Germany.',
   url: 'https://jobninja.com',
+  imageMaxHeight: '193px',
   images: ['landing.jpg', 'job search', 'job page.jpg', 'profile'],
   stack: [
     'React', 'React Native', 'Flask', 'MongoDB', 'Heroku',
