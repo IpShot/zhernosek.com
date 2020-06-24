@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Layout({
   children,
-  title = `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession}`,
+  title = `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession} from Russia`,
   ogType = OG.TYPE,
   ogSiteName = OG.SITE_NAME,
   ogTitle = OG.TITLE,
@@ -24,6 +24,7 @@ export default function Layout({
     <div>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={ogDescription}>
         <meta property="og:type" content={ogType} />
         <meta property="og:site_name" content={ogSiteName} />
         <meta property="og:title" content={ogTitle} />

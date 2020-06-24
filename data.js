@@ -23,10 +23,10 @@ export const PROFILE = {
 export const OG = {
   TYPE: 'website',
   SITE_NAME: 'zhernosek.com',
-  TITLE: `${PROFILE.ABOUT.Who}, ${PROFILE.ABOUT.Profession} from Russia.`,
+  TITLE: `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession} from Russia.`,
   URL: 'https://zhernosek.com/',
   IMAGE: 'https://zhernosek.com/avatar.jpeg',
-  DESCRIPTION: 'The page is about me, projects I worked on for my clients and my own ones.',
+  DESCRIPTION: 'The page is about me, my skills, projects for my clients and my own ones.',
 }
 
 export const SKILLS = {
