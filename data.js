@@ -132,8 +132,8 @@ export const PORTFOLIO = [{
   discuss the project, review photos, select appropriate ones and \
   pay for them. Photographers are able to view available projects, \
   submit proposals to interested ones, discuss a project with brand, \
-  upload photos and get payouts for them. Brands, photographers, \
-  ptojects, payments and payouts can be managed by an admin.',
+  upload photos and get payouts for them. Users, projects, \
+  payments and payouts can be managed by an admin.',
   images: [
     'landing.jpg', 'login', 'new project modal', 'brand start create project',
     'creator projects', 'creator project info', 'creator submit proposal',
