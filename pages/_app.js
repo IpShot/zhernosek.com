@@ -19,10 +19,10 @@ export default function App({ Component, pageProps }) {
   return (
     <React.Fragment>
     <Head>
-      <meta charSet="utf-8" />
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />
-      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170118012-1" />
     </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
