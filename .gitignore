@@ -3,4 +3,4 @@ out
 .next
 .DS_Store
 .env*
-_*
+_assets

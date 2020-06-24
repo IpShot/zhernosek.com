@@ -3,7 +3,7 @@ export const PROFILE = {
     Who: 'Roman Zhernosek',
     Lifetime: '09 Apr 1993 16:00:00 GMT+5',
     Profession: 'Full\xa0Stack Web\xa0Developer',
-    Experience: '5+ years',
+    Experience: '6+ years',
     Member: ['Gigster Talent Network', 'https://gigster.com/talent'],
     Education: ['Computer Science, Polytech', 'https://english.spbstu.ru'],
     Perfectionist: '99%',
@@ -18,6 +18,15 @@ export const PROFILE = {
     linkedin: 'https://www.linkedin.com/in/zhernosek-roman',
     email: 'roman@zhernosek.com',
   },
+}
+
+export const OG = {
+  TYPE: 'website',
+  SITE_NAME: 'zhernosek.com',
+  TITLE: `${PROFILE.ABOUT.Who}, ${PROFILE.ABOUT.Profession} from Russia.`,
+  URL: 'https://zhernosek.com/',
+  IMAGE: 'https://zhernosek.com/avatar.jpeg',
+  DESCRIPTION: 'The page is about me, projects I worked on for my clients and my own ones.',
 }
 
 export const SKILLS = {
