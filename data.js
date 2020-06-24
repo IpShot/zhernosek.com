@@ -104,12 +104,12 @@ export const PORTFOLIO = [{
 },{
   name: 'LightYear',
   desc: 'Personal development community',
-  details: 'Client wanted to develop a web community for \
+  details: 'Client wanted to develop a community for \
   personal development and leadership trainings. The platform \
   allows people to communicate and exchange knowledge via either \
-  private or group chats, and people dashboards. They are able to \
-  enroll in courses and trainings for accomplishing their goals. \
-  Users and courses can be managed by an admin.',
+  channels or direct messages, and people dashboards. They are \
+  able to enroll in courses and trainings for accomplishing \
+  their goals. Users and courses can be managed by an admin.',
   url: 'https://lightyear.co',
   logo: 'logo.svg',
   imageMaxHeight: '170px',
