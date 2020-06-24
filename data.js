@@ -91,9 +91,10 @@ export const SKILLS = {
 export const PORTFOLIO = [{
   name: 'JobNinja',
   desc: 'Jobs marketplace in Germany',
-  details: 'Client wanted to develop a responive web client and \
-  mobile apps for searching jobs according to set criterias and \
-  applying to them. The service has been developed for German labor market.',
+  details: 'Client wanted to develop a platform for searching \
+  jobs according to set criterias and applying to them. \
+  The platform has been developed for German labor market. \
+  There are a responive web client and mobile apps.',
   url: 'https://jobninja.com',
   imageMaxHeight: '193px',
   images: ['landing.jpg', 'job search', 'job page.jpg', 'profile'],
@@ -109,7 +110,8 @@ export const PORTFOLIO = [{
   allows people to communicate and exchange knowledge via either \
   channels or direct messages, and people dashboards. They are \
   able to enroll in courses and trainings for accomplishing \
-  their goals. Users and courses can be managed by an admin.',
+  their goals. Users and courses can be managed by an admin. \
+  The web app is responsive and available from desktop and mobile.',
   url: 'https://lightyear.co',
   logo: 'logo.svg',
   imageMaxHeight: '170px',
@@ -148,11 +150,12 @@ export const PORTFOLIO = [{
   ],
 },{
   name: 'Teem',
-  desc: 'The US schools platform',
-  details: 'Client wanted to develop a web app that allows school staffs \
-  to find each other and communicate easily, search any useful files/links \
-  which help them at work. The app has an admin side for managing schools \
-  and districts (group of schools in the US), users and topics.',
+  desc: 'The US schools community',
+  details: 'Client wanted to develop a community that allows school \
+  staffs to find each other and communicate easily, search any useful \
+  files/links which help them at work. The platform has an admin side \
+  for managing schools and districts (group of schools in the US), \
+  users and topics. There are a responive web client, mobiles and desktop apps.',
   images: [
     'landing', 'sign in', 'school staffs list', 'create new topic',
     'topic channel', 'notifications', 'global search', 'profile',
@@ -165,10 +168,11 @@ export const PORTFOLIO = [{
 },{
   name: 'MiID',
   desc: 'Customizable products marketplace',
-  details: 'Client wanted to develop a web app that allows users \
-  to customize products from different brands (and see 3D model at real time). \
-  They can buy either own created products or customized by another users, \
-  save products in favorites, like products, follow another users.',
+  details: 'Client wanted to develop a platform that allows users \
+  to customize products of different brands and look at 3D model \
+  at real time. They can buy either own created products or \
+  customized by another users, like and save products in favorites. \
+  There are web clients for desktop and mobiles.',
   images: [
     'landing.jpg', 'brand page', 'customization', 'cart', 'order info',
     'shopping history', 'account', 'public profile'
@@ -236,7 +240,8 @@ export const OWN_PROJECTS = [{
   watching TV shows. They can stop and repeat last phrase they \
   didn\'t understand in slower pace, check subtitles and explanation \
   on every word in the phrase, add words to a dictionary for future \
-  learning. Also there are some exercises available for memorize phrases.',
+  learning. Also there are some exercises available for memorize phrases. \
+  There is a responive web client for desktop and mobiles.',
   logo: 'logo.svg',
   imageMaxHeight: '176px',
   imagesExt: 'jpg',
