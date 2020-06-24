@@ -93,7 +93,7 @@ export const PORTFOLIO = [{
   desc: 'Jobs marketplace in Germany',
   details: 'Client wanted to develop a responive web client and \
   mobile apps for searching jobs according to set criterias and \
-  applying to them. The service has been developed for Germany.',
+  applying to them. The service has been developed for German labor market.',
   url: 'https://jobninja.com',
   imageMaxHeight: '193px',
   images: ['landing.jpg', 'job search', 'job page.jpg', 'profile'],
