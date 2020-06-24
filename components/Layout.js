@@ -24,7 +24,7 @@ export default function Layout({
     <div>
       <Head>
         <title>{title}</title>
-        <meta name="description" content={ogDescription}>
+        <meta name="description" content={ogDescription} />
         <meta property="og:type" content={ogType} />
         <meta property="og:site_name" content={ogSiteName} />
         <meta property="og:title" content={ogTitle} />
