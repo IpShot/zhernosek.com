@@ -82,6 +82,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       maxWidth: `calc(50% - ${theme.spacing(1)}px)`,
     },
+    [theme.breakpoints.down('xs')]: {
+      marginTop: theme.spacing(1.5),
+      '&:first-child': {
+        marginTop: theme.spacing(0.5),
+      },
+    },
   }),
   screenshot: {
     width: '100%',
