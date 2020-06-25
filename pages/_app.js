@@ -22,7 +22,13 @@ export default function App({ Component, pageProps }) {
       <meta httpEquiv="Content-type" content="text/html; charset=utf-8" />
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170118012-1" />
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <script dangerouslySetInnerHTML={{ __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+      ` }} />
     </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
