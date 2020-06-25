@@ -11,6 +11,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ProjectDialog from './ProjectDialog';
+import Label from './Label';
 
 const useStyles = makeStyles(() => ({
   media: ({ name }) => ({
@@ -25,7 +26,7 @@ function getLogoUrl(project = 'default', logo = 'logo.png') {
 }
 
 export default function ProjectCard(project, idx) {
-  const { name, desc, logo, url } = project;
+  const { name, desc, logo, url, label } = project;
   const classes = useStyles({ name });
   const [isDialogOpen, setDialogVisibility] = useState(false);
 
@@ -41,6 +42,7 @@ export default function ProjectCard(project, idx) {
     <Grid item key={idx} sm={6} xs={12}>
       <Card>
         <CardActionArea onClick={handleClickCard}>
+          {label && <Label text={label} />}
           <CardMedia
             className={classes.media}
             image={getLogoUrl(name, logo)}
