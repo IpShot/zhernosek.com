@@ -13,11 +13,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import ProjectDialog from './ProjectDialog';
 
 const useStyles = makeStyles(() => ({
-  media: ({ name }) => ({
+  media:{
     height: 140,
-    backgroundSize: name === 'MiID' ? 'auto' : 'contain',
+    backgroundSize: 'contain',
     backgroundColor: 'white',
-  }),
+  },
 }));
 
 function getLogoUrl(project = 'default', logo = 'logo.png') {
@@ -26,7 +26,7 @@ function getLogoUrl(project = 'default', logo = 'logo.png') {
 
 export default function ProjectCard(project, idx) {
   const { name, desc, logo, url } = project;
-  const classes = useStyles({ name });
+  const classes = useStyles();
   const [isDialogOpen, setDialogVisibility] = useState(false);
 
   const handleClickCard = useCallback(() => {
