@@ -149,8 +149,8 @@ export default function HomePage() {
       <Profile />
       <Skills />
       <Portfolio />
-      <Feedbacks />
       <OwnProjects />
+      <Feedbacks />
       <Copyright />
     </Layout>
   );
