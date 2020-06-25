@@ -42,8 +42,8 @@ export const SKILLS = {
   FRAMEWORKS: [
     { name: 'React', level: 5 },
     { name: 'Next.js', level: 5 },
+    { name: 'Material UI', level: 5 },
     { name: 'Meteor', level: 4.5 },
-    { name: 'Material UI', level: 4 },
     { name: 'Express', level: 4 },
     { name: 'Flask', level: 4 },
     { name: 'Mocha', level: 4 },
@@ -135,6 +135,19 @@ export const PORTFOLIO = [{
     'Intercom', 'Cloudinary', 'Amazon S3'
   ],
 },{
+  name: 'Words Explorer',
+  desc: 'Deep English words learning',
+  details: 'The service allows people to explore new words deeply. \
+  Instead of just a translation people are getting a bunch of \
+  information about the word meanings, synonyms, most common use \
+  cases (collocations) and examples with context, including short video.',
+  url: 'https://words.tbbe.ru',
+  label: 'OWN',
+  logo: 'logo.svg',
+  imageMaxHeight: '142px',
+  images: ['search', 'video.jpg', 'reminder.jpg', 'common words'],
+  stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
+},{
   name: 'Briefly',
   desc: 'Connect brands and photographers',
   details: 'Client wanted to create a web platform which connects \
@@ -187,6 +200,39 @@ export const PORTFOLIO = [{
     'shopping history', 'account', 'public profile'
   ],
   stack: ['React', 'Express', 'MongoDB'],
+},{
+  name: 'TBBE',
+  desc: 'Learn English watching TV shows',
+  details: 'The platform allows people to learn English while \
+  watching TV shows. They can stop and repeat last phrase they \
+  didn\'t understand in slower pace, check subtitles and explanation \
+  on every word in the phrase, add words to a dictionary for future \
+  learning. Also there are some exercises available for memorize phrases. \
+  There is a responive web client for desktop and mobiles.',
+  label: 'OWN',
+  logo: 'logo.svg',
+  imageMaxHeight: '176px',
+  imagesExt: 'jpg',
+  images: [
+    'dashboard', 'login.png',
+    'search serial', 'guide',
+    'exercise', 'virtual money'
+  ],
+  stack: [
+    'React', 'Eve', 'MongoDB', 'Crisp', 'Mailchimp', 'Yandex.Checkout',
+    'Yandex.Metrica', 'Google Analytics', 'FullStory'
+  ],
+},{
+  name: 'StudyTime',
+  desc: 'Timetable for students',
+  details: 'The project\'s target is to provide students with \
+  a usable and beautiful timetable, available from any device.\
+  There are a responsive web, mobile and desktop apps.',
+  label: 'OWN',
+  logo: 'logo.svg',
+  imageMaxHeight: '160px',
+  images: [ 'landing', 'timetable' ],
+  stack: [ 'Angular', 'Onsen UI', 'Meteor', 'MongoDB', 'Cordova', 'Electron' ],
 }]
 
 export const FEEDBACKS = [{
@@ -228,49 +274,4 @@ export const FEEDBACKS = [{
   owner: 'Igsaan Salie, PM',
   feedback: 'Roman is a great programmer. He is always aiming for excellence and that\'s not easy to find out there. \
   We will keep working for long.',
-}]
-
-export const OWN_PROJECTS = [{
-  name: 'Words Explorer',
-  desc: 'Deep English words learning',
-  details: 'The service allows people to explore new words deeply. \
-  Instead of just a translation people are getting a bunch of \
-  information about the word meanings, synonyms, most common use \
-  cases (collocations) and examples with context, including short video.',
-  url: 'https://words.tbbe.ru',
-  logo: 'logo.svg',
-  imageMaxHeight: '142px',
-  images: ['search', 'video.jpg', 'reminder.jpg', 'common words'],
-  stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
-},{
-  name: 'TBBE',
-  desc: 'Learn English watching TV shows',
-  details: 'The platform allows people to learn English while \
-  watching TV shows. They can stop and repeat last phrase they \
-  didn\'t understand in slower pace, check subtitles and explanation \
-  on every word in the phrase, add words to a dictionary for future \
-  learning. Also there are some exercises available for memorize phrases. \
-  There is a responive web client for desktop and mobiles.',
-  logo: 'logo.svg',
-  imageMaxHeight: '176px',
-  imagesExt: 'jpg',
-  images: [
-    'dashboard', 'login.png',
-    'search serial', 'guide',
-    'exercise', 'virtual money'
-  ],
-  stack: [
-    'React', 'Eve', 'MongoDB', 'Crisp', 'Mailchimp', 'Yandex.Checkout',
-    'Yandex.Metrica', 'Google Analytics', 'FullStory'
-  ],
-},{
-  name: 'StudyTime',
-  desc: 'Timetable for students',
-  logo: 'logo.svg',
-  details: 'The project\'s target is to provide students with \
-  a usable and beautiful timetable, available from any device.\
-  There are a responsive web, mobile and desktop apps.',
-  imageMaxHeight: '160px',
-  images: [ 'landing', 'timetable' ],
-  stack: [ 'Angular', 'Onsen UI', 'Meteor', 'MongoDB', 'Cordova', 'Electron' ],
 }]

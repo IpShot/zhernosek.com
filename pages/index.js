@@ -8,7 +8,7 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
+import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS } from '../data';
 import Layout from '../components/Layout';
 import Avatar from '../components/Avatar';
 import Socials from '../components/Socials';
@@ -117,21 +117,6 @@ function Feedbacks() {
   );
 }
 
-function OwnProjects() {
-  const classes = useStyles();
-  return (
-    <Box pt={6}>
-      <Typography variant="h2" gutterBottom>
-        Own Projects
-      </Typography>
-      <Divider />
-      <Grid container spacing={2} className={classes.portfolio}>
-        {OWN_PROJECTS.map(ProjectCard)}
-      </Grid>
-    </Box>
-  );
-}
-
 function Copyright() {
   const classes = useStyles();
   return (
@@ -150,7 +135,6 @@ export default function HomePage() {
       <Skills />
       <Portfolio />
       <Feedbacks />
-      <OwnProjects />
       <Copyright />
     </Layout>
   );
