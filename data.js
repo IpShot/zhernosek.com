@@ -42,8 +42,8 @@ export const SKILLS = {
   FRAMEWORKS: [
     { name: 'React', level: 5 },
     { name: 'Next.js', level: 5 },
+    { name: 'Material UI', level: 5 },
     { name: 'Meteor', level: 4.5 },
-    { name: 'Material UI', level: 4 },
     { name: 'Express', level: 4 },
     { name: 'Flask', level: 4 },
     { name: 'Mocha', level: 4 },
