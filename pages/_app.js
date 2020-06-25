@@ -5,7 +5,6 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../theme';
 import fonts from '../fonts';
 import 'react-medium-image-zoom/dist/styles.css';
-import '../integrations';
 
 export default function App({ Component, pageProps }) {
   React.useEffect(() => {
