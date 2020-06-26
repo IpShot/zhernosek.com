@@ -56,6 +56,7 @@ export const SKILLS = {
   ],
   DATABASE: [
     { name: 'MongoDB', level: 5 },
+    { name: 'Redis', level: 3 },
     { name: 'PostgreSQL', level: 3 },
     { name: 'ElasticSearch', level: 2 },
   ],
