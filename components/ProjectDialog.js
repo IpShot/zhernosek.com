@@ -13,7 +13,7 @@ import Zoom from 'react-medium-image-zoom';
 import { Skeleton } from '@material-ui/lab';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { useImage } from 'react-image';
+import { useImage } from '../utils/react-image';
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -103,7 +103,6 @@ function getScreenshotUrl(project, image, ext = 'png') {
 function Screenshot({ project, image, ext, maxHeight = 200 }) {
   const { src, isLoading } = useImage({
     srcList: getScreenshotUrl(project, image, ext),
-    useSuspense: false,
   });
   const classes = useStyles({ maxHeight });
 
