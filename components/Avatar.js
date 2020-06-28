@@ -1,7 +1,7 @@
 import { Box, Avatar } from '@material-ui/core';
 import { Skeleton } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/core/styles';
-import { useImage } from '../utils/react-image';
+import { useImage } from 'react-image';
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -16,7 +16,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Ava({ image, alt }) {
-  const { src, isLoading } = useImage({ srcList: image });
+  const { src, isLoading } = useImage({
+    srcList: image,
+    useSuspense: false,
+  });
   const classes = useStyles();
 
   return (
