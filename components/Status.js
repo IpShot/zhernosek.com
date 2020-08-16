@@ -4,9 +4,8 @@ import useXMLHttpRequest from '../utils/useXMLHttpRequest';
 
 const useStyles = makeStyles((theme) => ({
   box: {
-    [theme.breakpoints.down('xs')]: {
-      textAlign: 'center',
-    },
+    background: theme.palette.background.dark,
+    textAlign: 'center',
   },
   status: {
     color: theme.palette.text.gold,
@@ -30,7 +29,7 @@ export default function Status() {
   const status = getStatus(response, requestStatus);
   const classes = useStyles();
   return (
-    <Box pb={1} className={classes.box}>
+    <Box py={1} className={classes.box}>
       <Typography component="span" className={classes.status}>Status: </Typography>
       <Typography component="span" color="secondary">{status}</Typography>
     </Box>

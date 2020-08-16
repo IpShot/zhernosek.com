@@ -10,7 +10,6 @@ import {
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { PROFILE, SKILLS, PORTFOLIO, FEEDBACKS, OWN_PROJECTS } from '../data';
 import Layout from '../components/Layout';
-import Status from '../components/Status';
 import Avatar from '../components/Avatar';
 import Socials from '../components/Socials';
 import About from '../components/About';
@@ -147,7 +146,6 @@ function Copyright() {
 export default function HomePage() {
   return (
     <Layout>
-      <Status />
       <Profile />
       <Skills />
       <Portfolio />

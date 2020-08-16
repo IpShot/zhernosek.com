@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { PROFILE, OG } from '../data';
+import Status from '../components/Status';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -32,6 +33,7 @@ export default function Layout({
         <meta property="og:image" content={ogImage} />
         <meta property="og:description" content={ogDescription} />
       </Head>
+      <Status />
       <Container maxWidth="sm" className={classes.container}>
         {children}
       </Container>

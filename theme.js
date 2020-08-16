@@ -15,6 +15,9 @@ const theme = responsiveFontSizes(createMuiTheme({
       highlight: 'rgba(255, 255, 255, 0.9)',
       gold: 'rgba(255, 183, 77, 0.95)',
     },
+    background: {
+      dark: 'rgba(0, 0, 0, 0.1)',
+    }
   },
   typography: {
     h1: {
