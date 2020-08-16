@@ -12,6 +12,7 @@ export const PROFILE = {
     Lifestye: 'Healthy',
     Sports: 'Swimming, Volleyball, Boxing',
     Location: 'Saint\xa0Petersburg, Russia',
+    Resume: ['CV.pdf', '/cv.pdf'],
   },
   SOCIALS: {
     github: 'https://github.com/IpShot',
