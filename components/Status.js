@@ -10,6 +10,12 @@ const useStyles = makeStyles((theme) => ({
   status: {
     color: theme.palette.text.gold,
   },
+  text: {
+    display: 'inline-block',
+    minWidth: 120,
+    textAlign: 'left',
+    color: theme.palette.secondary.main,
+  },
 }));
 
 function getStatus(response, status) {
@@ -31,7 +37,7 @@ export default function Status() {
   return (
     <Box py={1} className={classes.box}>
       <Typography component="span" className={classes.status}>Status: </Typography>
-      <Typography component="span" color="secondary">{status}</Typography>
+      <Typography component="span" className={classes.text}>{status}</Typography>
     </Box>
   );
 }
