@@ -9,7 +9,6 @@ export const PROFILE = {
     Perfectionist: '99%',
     Minimalist: '95%',
     Humor: ['TARS', 'https://youtu.be/p3PfKf0ndik'],
-    Lifestye: 'Healthy',
     Sports: 'Swimming, Volleyball, Boxing',
     Location: 'Saint\xa0Petersburg, Russia',
     Resume: ['CV.pdf', '/cv.pdf'],
