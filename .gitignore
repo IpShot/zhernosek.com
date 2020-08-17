@@ -1,5 +1,6 @@
 node_modules
 out
+data.js
 .next
 .DS_Store
 .env*
