@@ -99,20 +99,6 @@ export const SKILLS = {
 }
 
 export const PORTFOLIO = [{
-  name: 'JobNinja',
-  desc: 'Jobs marketplace in Germany',
-  details: 'Client wanted to develop a platform for searching \
-  jobs according to set criterias and applying to them. \
-  The platform has been developed for German labor market. \
-  There are a responive web client and mobile apps.',
-  url: 'https://jobninja.com',
-  imageMaxHeight: '193px',
-  images: ['landing.jpg', 'job search', 'job page.jpg', 'profile'],
-  stack: [
-    'React', 'React Native', 'Flask', 'MongoDB', 'Heroku',
-    'Mixpanel', 'FullStory', 'Facebook Pixel', 'Google Analytics'
-  ],
-},{
   name: 'LightYear',
   desc: 'Personal development community',
   details: 'Client wanted to develop a community for \
@@ -159,6 +145,20 @@ export const PORTFOLIO = [{
     'Intercom', 'Mailgun', 'Amazon S3'
   ],
 },{
+  name: 'JobNinja',
+  desc: 'Jobs marketplace in Germany',
+  details: 'Client wanted to develop a platform for searching \
+  jobs according to set criterias and applying to them. \
+  The platform has been developed for German labor market. \
+  There are a responive web client and mobile apps.',
+  url: 'https://jobninja.com',
+  imageMaxHeight: '193px',
+  images: ['landing.jpg', 'job search', 'job page.jpg', 'profile'],
+  stack: [
+    'React', 'React Native', 'Flask', 'MongoDB', 'Heroku',
+    'Mixpanel', 'FullStory', 'Facebook Pixel', 'Google Analytics'
+  ],
+},{
   name: 'Teem',
   desc: 'The US schools community',
   details: 'Client wanted to develop a community that allows school \
@@ -191,18 +191,6 @@ export const PORTFOLIO = [{
 }]
 
 export const OWN_PROJECTS = [{
-  name: 'Words Explorer',
-  desc: 'Deep English words learning',
-  details: 'The service allows people to explore new words deeply. \
-  Instead of just a translation people are getting a bunch of \
-  information about the word meanings, synonyms, most common use \
-  cases (collocations) and examples with context, including short video.',
-  url: 'https://words.tbbe.ru',
-  logo: 'logo.svg',
-  imageMaxHeight: '142px',
-  images: ['search', 'video.jpg', 'reminder.jpg', 'common words'],
-  stack: [ 'React', 'Node', 'ElasticSearch', 'MongoDB', 'Material UI' ],
-},{
   name: 'TBBE',
   desc: 'Learn English watching TV shows',
   details: 'The platform allows people to learn English while \
