@@ -1,6 +1,7 @@
 export const PROFILE = {
   ABOUT: {
     Who: 'Your Name',
+    Country: 'Your Country',
     Lifetime: '10 Aug 1993 16:00:00 GMT+7',
     Profession: 'Full\xa0Stack Web\xa0Developer',
     Experience: '6+ years',
@@ -22,10 +23,10 @@ export const PROFILE = {
 
 export const OG = {
   TYPE: 'website',
-  SITE_NAME: 'zhernosek.com',
-  TITLE: `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession} from Russia.`,
-  URL: 'https://zhernosek.com/',
-  IMAGE: 'https://zhernosek.com/avatar.jpeg',
+  SITE_NAME: 'my-site.com',
+  TITLE: `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession} from ${PROFILE.ABOUT.Country}.`,
+  URL: 'https://my-site.com/',
+  IMAGE: 'https://my-site.com/avatar.jpeg',
   DESCRIPTION: 'The page is about me, my skills, projects for my clients and my own ones.',
 }
 

@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Layout({
   children,
-  title = `${PROFILE.ABOUT.Who} - ${PROFILE.ABOUT.Profession} from Russia`,
+  title = OG.TITLE,
   ogType = OG.TYPE,
   ogSiteName = OG.SITE_NAME,
   ogTitle = OG.TITLE,
